@@ -8,11 +8,11 @@
 import Foundation
 import Alamofire
 
-class Auth: AbstractRequestFactory {
+class Auth: RequestFactory {
   let errorParser: AbstractErrorParser
   let sessionManager: Session
   let queue: DispatchQueue
-  let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")
+  let baseUrl = URL(string: "https://github.com/GeekBrainsTutorial/online-store-api")
   
   init(
     errorParser: AbstractErrorParser,

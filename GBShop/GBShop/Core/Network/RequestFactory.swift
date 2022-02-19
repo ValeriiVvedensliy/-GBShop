@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-protocol AbstractRequestFactory {
+protocol RequestFactory {
   var errorParser: AbstractErrorParser { get }
   var sessionManager: Session { get }
   var queue: DispatchQueue { get }
@@ -20,7 +20,7 @@ protocol AbstractRequestFactory {
   ) -> DataRequest
 }
 
-extension AbstractRequestFactory {
+extension RequestFactory {
   
   @discardableResult
   public func request<T: Decodable>(
