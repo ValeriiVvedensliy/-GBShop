@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     )
   }
   
-  private func responseResult(response: AFDataResponse<LoginResult>) {
+  private func responseResult<T>(response: AFDataResponse<T>) {
     switch response.result {
     case .success(let result):
       print(result)
