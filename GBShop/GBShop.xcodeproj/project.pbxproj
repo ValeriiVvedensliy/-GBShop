@@ -32,6 +32,8 @@
 		E0F3046C27C12B8600F2A2A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F3046A27C12B8600F2A2A2 /* Main.storyboard */; };
 		E0F3046E27C12C2000F2A2A2 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F3046D27C12C2000F2A2A2 /* AbstractRequestFactory.swift */; };
 		E0F3047627C12F7A00F2A2A2 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E0F3047527C12F7A00F2A2A2 /* Swinject */; };
+		E0FCC83927CD5948000BE435 /* ProfileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC83827CD5948000BE435 /* ProfileResult.swift */; };
+		E0FCC83B27CD5996000BE435 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC83A27CD5996000BE435 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		E0F3046927C12B8600F2A2A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0F3046A27C12B8600F2A2A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E0F3046D27C12C2000F2A2A2 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		E0FCC83827CD5948000BE435 /* ProfileResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResult.swift; sourceTree = "<group>"; };
+		E0FCC83A27CD5996000BE435 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 			children = (
 				E0F3044427BEEB3300F2A2A2 /* LoginResult.swift */,
 				E0F3044627BEEB9200F2A2A2 /* User.swift */,
+				E0FCC83827CD5948000BE435 /* ProfileResult.swift */,
+				E0FCC83A27CD5996000BE435 /* UserProfile.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -414,8 +420,10 @@
 				E0F3046B27C12B8600F2A2A2 /* ViewController.swift in Sources */,
 				E0F3044527BEEB3300F2A2A2 /* LoginResult.swift in Sources */,
 				E0F3044727BEEB9200F2A2A2 /* User.swift in Sources */,
+				E0FCC83B27CD5996000BE435 /* UserProfile.swift in Sources */,
 				E0F3043F27BEDE4000F2A2A2 /* CustomDecodableSerializer.swift in Sources */,
 				E0F3044127BEE9F400F2A2A2 /* RequestFactory.swift in Sources */,
+				E0FCC83927CD5948000BE435 /* ProfileResult.swift in Sources */,
 				E0F3043D27BEDE0200F2A2A2 /* ErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
