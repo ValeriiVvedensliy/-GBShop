@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-  let auth = AppDelegate.container.resolve(Auth.self)!
+  let request = AppDelegate.container.resolve(AbstractRequestFactory.self)!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,18 +18,20 @@ class ViewController: UIViewController {
     logoutRequest()
     signUpRequest()
     editProfileRequest()
+    getProduct()
+    getProducts()
   }
   
   private func authRequest() {
-    auth.login(userName: "Somebody", password: "mypassword", completionHandler: responseResult)
+    request.login(userName: "Somebody", password: "mypassword", completionHandler: responseResult)
   }
 
   private func logoutRequest() {
-    auth.logout(userId: 123, completionHandler: responseResult)
+    request.logout(userId: 123, completionHandler: responseResult)
   }
   
   private func signUpRequest() {
-    auth.registerUser(
+    request.registerUser(
       userName: "Somebody",
       password: "mypassword",
       email: "some@some.ru",
@@ -41,7 +43,7 @@ class ViewController: UIViewController {
   }
   
   private func editProfileRequest() {
-    auth.changeUser(
+    request.changeUser(
       userId: 123,
       userName: "Somebody",
       password: "mypassword",
@@ -49,6 +51,21 @@ class ViewController: UIViewController {
       gender: "m",
       creditCard: "9872389-2424-234224-234",
       bio: "This is good! I think I will switch to another language",
+      completionHandler: responseResult
+    )
+  }
+
+  private func getProducts() {
+    request.getProducts(
+      pageNumber: 1,
+      categoryId: 123,
+      completionHandler: responseResult
+    )
+  }
+
+  private func getProduct() {
+    request.getProduct(
+      productId: 123,
       completionHandler: responseResult
     )
   }

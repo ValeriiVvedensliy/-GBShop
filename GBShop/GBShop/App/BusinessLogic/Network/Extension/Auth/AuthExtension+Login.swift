@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-extension Auth {
+extension AbstractRequestFactory {
   struct Login: RequestRouter {
     let baseUrl: URL
     let method: HTTPMethod = .get

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-extension Auth: AuthRequestFactory {
+extension AbstractRequestFactory: AuthRequestFactory {
   func login(
     userName: String,
     password: String,

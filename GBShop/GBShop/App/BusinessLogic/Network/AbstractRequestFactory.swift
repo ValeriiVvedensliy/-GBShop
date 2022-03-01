@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class Auth: RequestFactory {
+class AbstractRequestFactory: RequestFactory {
   let errorParser: AbstractErrorParser
   let sessionManager: Session
   let queue: DispatchQueue

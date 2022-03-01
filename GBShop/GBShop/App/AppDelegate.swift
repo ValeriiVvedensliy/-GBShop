@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let container: Container = {
       let container = Container()
       container.register(AbstractErrorParser.self) { _ in ErrorParser() }
-      container.register(Auth.self) { r in
+      container.register(AbstractRequestFactory.self) { r in
         lazy var commonSession: Session = {
           let configuration = URLSessionConfiguration.default
           configuration.httpShouldSetCookies = false
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }()
         let sessionQueue = DispatchQueue.global(qos: .utility)
   
-        return Auth(errorParser: r.resolve(
+        return AbstractRequestFactory(errorParser: r.resolve(
           AbstractErrorParser.self)!,
           sessionManager: commonSession,
           queue: sessionQueue
