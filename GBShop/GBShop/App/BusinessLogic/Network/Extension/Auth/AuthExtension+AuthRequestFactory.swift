@@ -10,18 +10,18 @@ import Alamofire
 
 extension AbstractRequestFactory: AuthRequestFactory {
   func login(
-    userName: String,
+    login: String,
     password: String,
     completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
 
-    let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
+    let requestModel = Login(baseUrl: baseUrl, login: login, password: password)
     self.request(request: requestModel, completionHandler: completionHandler)
   }
 
   func logout(
-    userId: Int,
+    userId: String,
     completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
@@ -31,7 +31,7 @@ extension AbstractRequestFactory: AuthRequestFactory {
   }
 
   func registerUser(
-    userName: String,
+    login: String,
     password: String,
     email: String,
     gender: String,
@@ -43,7 +43,7 @@ extension AbstractRequestFactory: AuthRequestFactory {
 
     let requestModel = Register(
       baseUrl: baseUrl,
-      username: userName,
+      login: login,
       password: password,
       email: email,
       gender: gender,
@@ -54,8 +54,8 @@ extension AbstractRequestFactory: AuthRequestFactory {
   }
 
   func changeUser(
-    userId: Int,
-    userName: String,
+    userId: String,
+    login: String,
     password: String,
     email: String,
     gender: String,
@@ -68,7 +68,7 @@ extension AbstractRequestFactory: AuthRequestFactory {
     let requestModel = ChangeUser(
       baseUrl: baseUrl,
       userId: userId,
-      username: userName,
+      login: login,
       password: password,
       email: email,
       gender: gender,

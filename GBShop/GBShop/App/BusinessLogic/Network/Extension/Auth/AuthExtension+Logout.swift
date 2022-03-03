@@ -11,10 +11,10 @@ import Alamofire
 extension AbstractRequestFactory {
   struct Logout: RequestRouter {
     let baseUrl: URL
-    let method: HTTPMethod = .get
-    let path: String = "logout.json"
+    let method: HTTPMethod = .post
+    let path: String = "logout"
     
-    let userId: Int
+    let userId: String
     var parameters: Parameters? {
       return [
         "userId": userId

@@ -11,16 +11,16 @@ import Alamofire
 extension AbstractRequestFactory {
   struct Products: RequestRouter {
     let baseUrl: URL
-    let method: HTTPMethod = .get
-    let path: String = "catalogData.json"
+    let method: HTTPMethod = .post
+    let path: String = "products"
     
-    let pageNumber: Int
-    let categoryId: Int
+    let pageNumber: String
+    let categoryId: String
     
     var parameters: Parameters? {
       return [
-        "page_number" : pageNumber,
-        "id_category": categoryId
+        "pageNumber" : pageNumber,
+        "categoryId": categoryId
       ]
     }
   }

@@ -12,7 +12,7 @@ class AbstractRequestFactory: RequestFactory {
   let errorParser: AbstractErrorParser
   let sessionManager: Session
   let queue: DispatchQueue
-  let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")
+  let baseUrl = URL(string: "https://stormy-refuge-30742.herokuapp.com/")
   
   init(
     errorParser: AbstractErrorParser,

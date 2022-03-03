@@ -10,18 +10,20 @@ import Alamofire
 
 extension AbstractRequestFactory: ProductRequestFactory {
   func getProducts(
-    pageNumber: Int,
-    categoryId: Int,
-    completionHandler: @escaping (AFDataResponse<[Product]>) -> Void) {
-      guard let baseUrl = baseUrl else { return }
+    pageNumber: String,
+    categoryId: String,
+    completionHandler: @escaping (AFDataResponse<ProductsResponse>) -> Void
+  ) {
+    guard let baseUrl = baseUrl else { return }
 
-      let requestModel = Products(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
-      self.request(request: requestModel, completionHandler: completionHandler)
-    }
-  
+    let requestModel = Products(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
+    self.request(request: requestModel, completionHandler: completionHandler)
+  }
+      
   func getProduct(
-    productId: Int,
-    completionHandler: @escaping (AFDataResponse<ProductDescription>) -> Void) {
+    productId: String,
+    completionHandler: @escaping (AFDataResponse<ProductDescription>) -> Void
+  ) {
       guard let baseUrl = baseUrl else { return }
 
       let requestModel = ProductsDetail(baseUrl: baseUrl, productId: productId)
