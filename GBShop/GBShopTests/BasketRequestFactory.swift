@@ -1,24 +1,25 @@
 //
-//  ProductRequestFactory.swift
+//  BasketRequestFactory.swift
 //  GBShopTests
 //
-//  Created by Valera Vvedenskiy on 01.03.2022.
+//  Created by Valera Vvedenskiy on 07.03.2022.
 //
+
 
 import XCTest
 import Alamofire
 @testable import GBShop
 
-class ProductRequestFactory: XCTestCase {
-  let expectation = XCTestExpectation(description: "ProductRequestFactory")
+class BasketRequestFactory: XCTestCase {
+  let expectation = XCTestExpectation(description: "BasketRequestFactory")
   var errorParser: ErrorParserStub!
   var timeout: TimeInterval = 5.0
-  var product: AbstractRequestFactory!
+  var basket: AbstractRequestFactory!
   
   override func setUp() {
     super.setUp()
     errorParser = ErrorParserStub()
-    product = AppDelegate.container.resolve(AbstractRequestFactory.self)!
+    basket = AppDelegate.container.resolve(AbstractRequestFactory.self)!
   }
   
   override func tearDown() {
@@ -26,11 +27,10 @@ class ProductRequestFactory: XCTestCase {
     errorParser = nil
   }
   
-  func testGetProducts() {
-    product.getProducts(
-      pageNumber: "1",
-      categoryId: "123"
-    ) { [weak self] (response: AFDataResponse<ProductsResponse>) in
+  func testAddProductToBasket() {
+    basket.addProduct(
+      productId: UUID().uuidString
+    ) { [weak self] (response: AFDataResponse<BasketResponse>) in
       switch response.result {
       case .success(_): break
       case .failure(let error):
@@ -40,11 +40,11 @@ class ProductRequestFactory: XCTestCase {
     }
     wait(for: [expectation], timeout: timeout)
   }
-
-  func testGetProduct() {
-    product.getProduct(
-      productId: "123"
-    ) { [weak self] (response: AFDataResponse<ProductDescription>) in
+  
+  func testDeleteProductFromBasket() {
+    basket.deleteProduct(
+      productId: UUID().uuidString
+    ) { [weak self] (response: AFDataResponse<BasketResponse>) in
       switch response.result {
       case .success(_): break
       case .failure(let error):

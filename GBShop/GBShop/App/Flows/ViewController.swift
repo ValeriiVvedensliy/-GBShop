@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     getComments()
     addComment()
     deleteComment()
+    addProductToBasket()
+    deleteProductFromBasket()
   }
   
   private func authRequest() {
@@ -92,6 +94,20 @@ class ViewController: UIViewController {
     request.deleteComment(
       productId: UUID().uuidString,
       commentId: UUID().uuidString,
+      completionHandler: responseResult
+    )
+  }
+  
+  private func addProductToBasket() {
+    request.addProduct(
+      productId: UUID().uuidString,
+      completionHandler: responseResult
+    )
+  }
+  
+  private func deleteProductFromBasket() {
+    request.deleteProduct(
+      productId: UUID().uuidString,
       completionHandler: responseResult
     )
   }
