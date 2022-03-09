@@ -56,6 +56,7 @@
 		E0FCC8B327D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B227D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift */; };
 		E0FCC8B527D68C76000BE435 /* CommentRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B427D68C76000BE435 /* CommentRequestFactory.swift */; };
 		E0FCC8B727D68E80000BE435 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B627D68E80000BE435 /* BasketRequestFactory.swift */; };
+		E0FCC8BA27D6950A000BE435 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B927D6950A000BE435 /* Basket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		E0FCC8B227D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasketExtension+AbstractRequestFactory.swift"; sourceTree = "<group>"; };
 		E0FCC8B427D68C76000BE435 /* CommentRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRequestFactory.swift; sourceTree = "<group>"; };
 		E0FCC8B627D68E80000BE435 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
+		E0FCC8B927D6950A000BE435 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 		E0EC4C9E27BC4DC40023692E /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCC8B827D694D9000BE435 /* Singleton */,
 				E0F3044827BEEC6600F2A2A2 /* Network */,
 			);
 			path = BusinessLogic;
@@ -405,6 +408,14 @@
 			path = Basket;
 			sourceTree = "<group>";
 		};
+		E0FCC8B827D694D9000BE435 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC8B927D6950A000BE435 /* Basket.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -549,6 +560,7 @@
 				E0FCC89727CFE71A000BE435 /* ProductsResponse.swift in Sources */,
 				E0F3045527BEF6A300F2A2A2 /* AuthExtension+Login.swift in Sources */,
 				E0FCC88A27CE7411000BE435 /* ProductRequestFactory.swift in Sources */,
+				E0FCC8BA27D6950A000BE435 /* Basket.swift in Sources */,
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,
 				E0FCC8B327D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift in Sources */,
 				E0EC4C6B27BC4CA10023692E /* AppDelegate.swift in Sources */,

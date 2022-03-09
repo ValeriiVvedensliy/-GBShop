@@ -11,12 +11,17 @@ extension AbstractRequestFactory {
   struct BasketAction: RequestRouter {
     let baseUrl: URL
     let method: HTTPMethod = .post
-    let path: String
-    let productId: String
+    let path = "pay_product"
+    let userId: String
+    let products = Basket.shared.getProductIds() ?? []
+    let cash = Basket.shared.getPrice() ?? 0
+    let encoding: RequestRouterEncoding = .json
     
     var parameters: Parameters? {
       return [
-        "productId" : productId
+        "userId" : userId,
+        "productsId" : products,
+        "cash" : cash
       ]
     }
   }

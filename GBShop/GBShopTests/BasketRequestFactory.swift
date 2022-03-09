@@ -27,23 +27,8 @@ class BasketRequestFactory: XCTestCase {
     errorParser = nil
   }
   
-  func testAddProductToBasket() {
-    basket.addProduct(
-      productId: UUID().uuidString
-    ) { [weak self] (response: AFDataResponse<BasketResponse>) in
-      switch response.result {
-      case .success(_): break
-      case .failure(let error):
-        XCTFail(error.localizedDescription)
-      }
-      self?.expectation.fulfill()
-    }
-    wait(for: [expectation], timeout: timeout)
-  }
-  
-  func testDeleteProductFromBasket() {
-    basket.deleteProduct(
-      productId: UUID().uuidString
+  func testPayBasket() {
+    basket.payBasket(userId: UUID().uuidString
     ) { [weak self] (response: AFDataResponse<BasketResponse>) in
       switch response.result {
       case .success(_): break

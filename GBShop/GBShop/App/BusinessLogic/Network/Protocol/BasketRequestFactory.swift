@@ -9,12 +9,8 @@ import Foundation
 import Alamofire
 
 protocol BasketRequestFactory {
-  func addProduct(
-    productId: String,
-    completionHandler: @escaping (AFDataResponse<BasketResponse>) -> Void
-  )
-  func deleteProduct(
-    productId: String,
+  func payBasket(
+    userId: String,
     completionHandler: @escaping (AFDataResponse<BasketResponse>) -> Void
   )
 }

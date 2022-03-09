@@ -10,6 +10,6 @@ import Foundation
 struct Product: Codable {
   let id: Int
   let name: String
-  let price: Int
+  let price: Decimal
   let description: String
 }
