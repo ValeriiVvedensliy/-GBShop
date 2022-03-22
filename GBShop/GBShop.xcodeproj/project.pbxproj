@@ -41,6 +41,7 @@
 		E0FCC89127CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC89027CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift */; };
 		E0FCC89327CE79C5000BE435 /* ProductExtension+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC89227CE79C5000BE435 /* ProductExtension+Products.swift */; };
 		E0FCC89527CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC89427CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift */; };
+		E0FCC89727CFE71A000BE435 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC89627CFE71A000BE435 /* ProductsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E0FCC89027CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductExtension+AbstractRequestFactory.swift"; sourceTree = "<group>"; };
 		E0FCC89227CE79C5000BE435 /* ProductExtension+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductExtension+Products.swift"; sourceTree = "<group>"; };
 		E0FCC89427CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductExtension+ProductsDetail.swift"; sourceTree = "<group>"; };
+		E0FCC89627CFE71A000BE435 /* ProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 			children = (
 				E0FCC88527CE7303000BE435 /* Product.swift */,
 				E0FCC88727CE732E000BE435 /* ProductDescription.swift */,
+				E0FCC89627CFE71A000BE435 /* ProductsResponse.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			files = (
 				E0FCC88627CE7303000BE435 /* Product.swift in Sources */,
 				E0F3045327BEF66000F2A2A2 /* AuthExtension+AuthRequestFactory.swift in Sources */,
+				E0FCC89727CFE71A000BE435 /* ProductsResponse.swift in Sources */,
 				E0F3045527BEF6A300F2A2A2 /* AuthExtension+Login.swift in Sources */,
 				E0FCC88A27CE7411000BE435 /* ProductRequestFactory.swift in Sources */,
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,

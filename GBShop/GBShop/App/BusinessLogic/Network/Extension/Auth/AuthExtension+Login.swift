@@ -11,14 +11,14 @@ import Alamofire
 extension AbstractRequestFactory {
   struct Login: RequestRouter {
     let baseUrl: URL
-    let method: HTTPMethod = .get
-    let path: String = "login.json"
+    let method: HTTPMethod = .post
+    let path: String = "login"
     
     let login: String
     let password: String
     var parameters: Parameters? {
       return [
-        "username": login,
+        "login": login,
         "password": password
       ]
     }

@@ -10,12 +10,12 @@ import Alamofire
 
 protocol ProductRequestFactory {
   func getProducts(
-    pageNumber: Int,
-    categoryId: Int,
-    completionHandler: @escaping (AFDataResponse<[Product]>) -> Void
+    pageNumber: String,
+    categoryId: String,
+    completionHandler: @escaping (AFDataResponse<ProductsResponse>) -> Void
   )
   func getProduct(
-    productId: Int,
+    productId: String,
     completionHandler: @escaping (AFDataResponse<ProductDescription>) -> Void
   )
 }

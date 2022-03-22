@@ -23,17 +23,17 @@ class ViewController: UIViewController {
   }
   
   private func authRequest() {
-    request.login(userName: "Somebody", password: "mypassword", completionHandler: responseResult)
+    request.login(login: "valerii", password: "02299394", completionHandler: responseResult)
   }
 
   private func logoutRequest() {
-    request.logout(userId: 123, completionHandler: responseResult)
+    request.logout(userId: UUID().uuidString, completionHandler: responseResult)
   }
   
   private func signUpRequest() {
     request.registerUser(
-      userName: "Somebody",
-      password: "mypassword",
+      login: "valerii",
+      password: "02299394",
       email: "some@some.ru",
       gender: "m",
       creditCard: "9872389-2424-234224-234",
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
   
   private func editProfileRequest() {
     request.changeUser(
-      userId: 123,
-      userName: "Somebody",
+      userId: UUID().uuidString,
+      login: "Somebody",
       password: "mypassword",
       email: "some@some.ru",
       gender: "m",
@@ -57,15 +57,15 @@ class ViewController: UIViewController {
 
   private func getProducts() {
     request.getProducts(
-      pageNumber: 1,
-      categoryId: 123,
+      pageNumber: "1",
+      categoryId: "123",
       completionHandler: responseResult
     )
   }
 
   private func getProduct() {
     request.getProduct(
-      productId: 123,
+      productId: UUID().uuidString,
       completionHandler: responseResult
     )
   }
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
   private func responseResult<T>(response: AFDataResponse<T>) {
     switch response.result {
     case .success(let result):
-      print(result)
+      print("\(result) \n")
     case .failure(let error):
       print(error.localizedDescription)
     }

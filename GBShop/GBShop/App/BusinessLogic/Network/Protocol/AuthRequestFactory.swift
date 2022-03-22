@@ -10,18 +10,18 @@ import Alamofire
 
 protocol AuthRequestFactory {
   func login(
-    userName: String,
+    login: String,
     password: String,
     completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
   )
 
   func logout(
-    userId: Int,
+    userId: String,
     completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   )
 
   func registerUser(
-    userName: String,
+    login: String,
     password: String,
     email: String,
     gender: String,
@@ -31,8 +31,8 @@ protocol AuthRequestFactory {
   )
 
   func changeUser(
-    userId: Int,
-    userName: String,
+    userId: String,
+    login: String,
     password: String,
     email: String,
     gender: String,

@@ -11,11 +11,12 @@ import Alamofire
 extension AbstractRequestFactory {
   struct ChangeUser: RequestRouter {
     let baseUrl: URL
-    let method: HTTPMethod = .get
-    let path: String = "changeUserData.json"
+    let method: HTTPMethod = .post
+    let path: String = "change"
+    let encoding: RequestRouterEncoding = .json
     
-    let userId: Int
-    let username: String
+    let userId: String
+    let login: String
     let password: String
     let email: String
     let gender: String
@@ -25,7 +26,7 @@ extension AbstractRequestFactory {
     var parameters: Parameters? {
       return [
         "userId": userId,
-        "username": username,
+        "login": login,
         "password": password,
         "email": email,
         "gender": gender,
