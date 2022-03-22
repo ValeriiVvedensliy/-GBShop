@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     editProfileRequest()
     getProduct()
     getProducts()
+    getComments()
+    addComment()
+    deleteComment()
   }
   
   private func authRequest() {
@@ -66,6 +69,29 @@ class ViewController: UIViewController {
   private func getProduct() {
     request.getProduct(
       productId: UUID().uuidString,
+      completionHandler: responseResult
+    )
+  }
+  
+  private func getComments() {
+    request.getComments(
+      productId: UUID().uuidString,
+      completionHandler: responseResult
+    )
+  }
+
+  private func addComment() {
+    request.addComment(
+      productId: UUID().uuidString,
+      userId: UUID().uuidString,
+      completionHandler: responseResult
+    )
+  }
+
+  private func deleteComment() {
+    request.deleteComment(
+      productId: UUID().uuidString,
+      commentId: UUID().uuidString,
       completionHandler: responseResult
     )
   }
