@@ -57,6 +57,9 @@
 		E0FCC8B527D68C76000BE435 /* CommentRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B427D68C76000BE435 /* CommentRequestFactory.swift */; };
 		E0FCC8B727D68E80000BE435 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B627D68E80000BE435 /* BasketRequestFactory.swift */; };
 		E0FCC8BA27D6950A000BE435 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC8B927D6950A000BE435 /* Basket.swift */; };
+		E0FCC98527EA7957000BE435 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = E0FCC98427EA7957000BE435 /* RxFlow */; };
+		E0FCC98827EA79B3000BE435 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = E0FCC98727EA79B3000BE435 /* Reusable */; };
+		E0FCC98B27EA7AF5000BE435 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = E0FCC98A27EA7AF5000BE435 /* RxDataSources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +139,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FCC98527EA7957000BE435 /* RxFlow in Frameworks */,
 				E0F3043827BEDD3E00F2A2A2 /* Alamofire in Frameworks */,
 				E0F3047627C12F7A00F2A2A2 /* Swinject in Frameworks */,
+				E0FCC98B27EA7AF5000BE435 /* RxDataSources in Frameworks */,
+				E0FCC98827EA79B3000BE435 /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +441,9 @@
 			packageProductDependencies = (
 				E0F3043727BEDD3E00F2A2A2 /* Alamofire */,
 				E0F3047527C12F7A00F2A2A2 /* Swinject */,
+				E0FCC98427EA7957000BE435 /* RxFlow */,
+				E0FCC98727EA79B3000BE435 /* Reusable */,
+				E0FCC98A27EA7AF5000BE435 /* RxDataSources */,
 			);
 			productName = GBShop;
 			productReference = E0EC4C6727BC4CA10023692E /* GBShop.app */;
@@ -511,6 +520,9 @@
 			packageReferences = (
 				E0F3043627BEDD3E00F2A2A2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E0F3047427C12F7A00F2A2A2 /* XCRemoteSwiftPackageReference "Swinject" */,
+				E0FCC98327EA7957000BE435 /* XCRemoteSwiftPackageReference "RxFlow" */,
+				E0FCC98627EA79B3000BE435 /* XCRemoteSwiftPackageReference "Reusable" */,
+				E0FCC98927EA7AF5000BE435 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = E0EC4C6827BC4CA10023692E /* Products */;
 			projectDirPath = "";
@@ -958,6 +970,30 @@
 				kind = branch;
 			};
 		};
+		E0FCC98327EA7957000BE435 /* XCRemoteSwiftPackageReference "RxFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxFlow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		E0FCC98627EA79B3000BE435 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		E0FCC98927EA7AF5000BE435 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -970,6 +1006,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E0F3047427C12F7A00F2A2A2 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		E0FCC98427EA7957000BE435 /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0FCC98327EA7957000BE435 /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+		E0FCC98727EA79B3000BE435 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0FCC98627EA79B3000BE435 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		E0FCC98A27EA7AF5000BE435 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0FCC98927EA7AF5000BE435 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
