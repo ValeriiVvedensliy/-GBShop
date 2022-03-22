@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-extension Auth: AuthRequestFactory {
+extension AbstractRequestFactory: AuthRequestFactory {
   func login(
     userName: String,
     password: String,
@@ -22,7 +22,7 @@ extension Auth: AuthRequestFactory {
 
   func logout(
     userId: Int,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
 
@@ -37,7 +37,7 @@ extension Auth: AuthRequestFactory {
     gender: String,
     creditCard: String,
     bio: String,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
 
@@ -61,7 +61,7 @@ extension Auth: AuthRequestFactory {
     gender: String,
     creditCard: String,
     bio: String,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
 

@@ -17,7 +17,7 @@ protocol AuthRequestFactory {
 
   func logout(
     userId: Int,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   )
 
   func registerUser(
@@ -27,7 +27,7 @@ protocol AuthRequestFactory {
     gender: String,
     creditCard: String,
     bio: String,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   )
 
   func changeUser(
@@ -38,7 +38,7 @@ protocol AuthRequestFactory {
     gender: String,
     creditCard: String,
     bio: String,
-    completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
+    completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   )
   
 }
