@@ -29,7 +29,7 @@ class AuthRequestFactory: XCTestCase {
 
   func testLogin() {
     auth.login(
-      userName: "Somebody",
+      login: "Somebody",
       password: "mypassword"
     ) { [weak self] (response: AFDataResponse<LoginResult>) in
       switch response.result {
@@ -44,7 +44,7 @@ class AuthRequestFactory: XCTestCase {
 
   func testLogout() {
     auth.logout(
-      userId: 123
+      userId: "123"
     ) { [weak self] (response: AFDataResponse<ProfileResult>) in
       switch response.result {
       case .success(_): break
@@ -58,7 +58,7 @@ class AuthRequestFactory: XCTestCase {
 
   func testRegisterUser() {
     auth.registerUser(
-      userName: "Somebody",
+      login: "Somebody",
       password: "mypassword",
       email: "some@some.ru",
       gender: "m",
@@ -77,8 +77,8 @@ class AuthRequestFactory: XCTestCase {
   
   func testEditProfile() {
     auth.changeUser(
-      userId: 123,
-      userName: "Somebody",
+      userId: "123",
+      login: "Somebody",
       password: "mypassword",
       email: "some@some.ru",
       gender: "m",

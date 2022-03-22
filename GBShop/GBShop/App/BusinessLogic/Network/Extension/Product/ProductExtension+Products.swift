@@ -13,8 +13,9 @@ extension AbstractRequestFactory {
     let baseUrl: URL
     let method: HTTPMethod = .post
     let path: String = "products"
+    let encoding: RequestRouterEncoding = .json
     
-    let pageNumber: String
+    let pageNumber: Int
     let categoryId: String
     
     var parameters: Parameters? {

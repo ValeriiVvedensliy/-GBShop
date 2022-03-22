@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     getComments()
     addComment()
     deleteComment()
+    payBasketFlow()
   }
   
   private func authRequest() {
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
 
   private func getProducts() {
     request.getProducts(
-      pageNumber: "1",
+      pageNumber: 1,
       categoryId: "123",
       completionHandler: responseResult
     )
@@ -94,6 +95,24 @@ class ViewController: UIViewController {
       commentId: UUID().uuidString,
       completionHandler: responseResult
     )
+  }
+
+  private func payBasketFlow() {
+    let basket = Basket.shared
+    basket.addProduct(product: Product(
+      id: 1,
+      name: "Айфон",
+      price: 38_000,
+      description: "телефон"
+    ))
+    basket.addProduct(product: Product(
+      id: 2,
+      name: "Mac_Book",
+      price: 78_000,
+      description: "ноутбук"
+    ))
+    
+    request.payBasket(userId: UUID().uuidString, completionHandler: responseResult)
   }
   
   private func responseResult<T>(response: AFDataResponse<T>) {

@@ -10,7 +10,7 @@ import Alamofire
 
 extension AbstractRequestFactory: ProductRequestFactory {
   func getProducts(
-    pageNumber: String,
+    pageNumber: Int,
     categoryId: String,
     completionHandler: @escaping (AFDataResponse<ProductsResponse>) -> Void
   ) {

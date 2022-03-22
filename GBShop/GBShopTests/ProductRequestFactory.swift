@@ -29,8 +29,8 @@ class ProductRequestFactory: XCTestCase {
   func testGetProducts() {
     product.getProducts(
       pageNumber: 1,
-      categoryId: 123
-    ) { [weak self] (response: AFDataResponse<[Product]>) in
+      categoryId: "123"
+    ) { [weak self] (response: AFDataResponse<ProductsResponse>) in
       switch response.result {
       case .success(_): break
       case .failure(let error):
@@ -43,7 +43,7 @@ class ProductRequestFactory: XCTestCase {
 
   func testGetProduct() {
     product.getProduct(
-      productId: 123
+      productId: "123"
     ) { [weak self] (response: AFDataResponse<ProductDescription>) in
       switch response.result {
       case .success(_): break
