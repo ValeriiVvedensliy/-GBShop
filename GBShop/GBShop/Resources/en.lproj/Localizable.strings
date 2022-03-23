@@ -1,0 +1,12 @@
+// MARK: - AButtonViewCell
+"ButtonViewCell.Label.Text" = "Log In";
+"ButtonViewCell.LogIning.Label.Text" = "Log Ining";
+"TextButtonViewCell.Title.Text" = "Go to registration";
+
+// MARK: - ValidationResultCellModel
+"ValidationCellModel.Text" = "Login or password is invalid";
+
+// MARK: - LGInputFormTableViewController
+"AuthorisationTableViewController.TitleCellModel.Title" = "GBShop";
+"AuthorisationTableViewController.LoginTextField.Placeholder" = "Login";
+"AuthorisationTableViewController.PasswordTextField.Placeholder" = "Password";
