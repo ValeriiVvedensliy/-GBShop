@@ -31,5 +31,5 @@ class TitleTableViewCell: RxTableViewCell<TitleCellModel>, NibReusable {
 private enum Constants {
   // Colors
   static let lblTitleForegroundColor = UIColor.White
-  static let contentViewBackgroundColor = UIColor.Grey
+  static let contentViewBackgroundColor = UIColor.Purple
 }

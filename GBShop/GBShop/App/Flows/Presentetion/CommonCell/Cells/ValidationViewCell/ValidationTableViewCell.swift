@@ -36,5 +36,5 @@ class ValidationTableViewCell: RxTableViewCell<ValidationCellModel>, NibReusable
 private enum Constants {
   // Colors
   static let labelTextColor = UIColor.Red
-  static let contentViewBackgroundColor = UIColor.Grey
+  static let contentViewBackgroundColor = UIColor.Purple
 }
