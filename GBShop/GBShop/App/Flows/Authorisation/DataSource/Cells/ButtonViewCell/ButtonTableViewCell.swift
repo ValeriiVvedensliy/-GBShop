@@ -103,7 +103,7 @@ class ButtonTableViewCell: RxTableViewCell<ButtonCellModel>, NibReusable  {
 
 private enum Constants {
   // Colors
-  static let contentViewBackgroundColor = UIColor.Grey
+  static let contentViewBackgroundColor = UIColor.Purple
   static let rootViewBackgroundColor = UIColor.Blue
   static let spinnerTintColor = UIColor.White
   static let spinnerColor = UIColor.White

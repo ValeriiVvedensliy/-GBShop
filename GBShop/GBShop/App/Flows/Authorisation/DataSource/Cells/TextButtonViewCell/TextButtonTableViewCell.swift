@@ -33,6 +33,7 @@ class TextButtonTableViewCell: RxTableViewCell<TextButtonCellModel>, NibReusable
       .disposed(by: disposeBag)
     
     button.setTitle(item.title, for: .normal)
+    button.tintColor = Constants.buttonTintColor
   }
   
   private func setUpView() {
@@ -42,5 +43,6 @@ class TextButtonTableViewCell: RxTableViewCell<TextButtonCellModel>, NibReusable
 
 private enum Constants {
   // Color
-  static let contentViewBackgroundColor = UIColor.Grey
+  static let contentViewBackgroundColor = UIColor.Purple
+  static let buttonTintColor = UIColor.Blue
 }

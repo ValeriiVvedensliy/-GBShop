@@ -65,7 +65,7 @@ class TextFieldTableViewCell: RxTableViewCell<TextFieldCellModel>, NibReusable {
 private enum Constants {
   // Color
   static let textFieldForegroundColor = UIColor.darkGray.withAlphaComponent(0.2)
-  static let contentViewBackgroundColor = UIColor.Grey
+  static let contentViewBackgroundColor = UIColor.Purple
   static let circledViewBackgroundColor = UIColor.White
   static let textFieldTextColor = UIColor.Black
   static let textFieldBackgroundColor = UIColor.clear
