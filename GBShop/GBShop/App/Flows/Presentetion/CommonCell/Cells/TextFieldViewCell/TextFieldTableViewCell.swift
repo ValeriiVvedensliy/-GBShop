@@ -34,8 +34,10 @@ class TextFieldTableViewCell: RxTableViewCell<TextFieldCellModel>, NibReusable {
   override func config(item: TextFieldCellModel) {
     textField.attributedPlaceholder = item.placeholder
       .localizationString
-      .leftAlignedAttributedString(
-        foreground: Constants.textFieldForegroundColor
+      .aligmentAttributedString(
+        foreground: Constants.textFieldForegroundColor,
+        aligment: .left,
+        sketchLineHeight: Constants.placeholderSketchLineHeight
       )
 
     textField.rx.text
@@ -70,5 +72,8 @@ private enum Constants {
   static let textFieldTextColor = UIColor.Black
   static let textFieldBackgroundColor = UIColor.clear
   static let textFieldTintColor = UIColor.Blue
+  
+  // Sizes
+  static let placeholderSketchLineHeight: CGFloat = 22
 }
 

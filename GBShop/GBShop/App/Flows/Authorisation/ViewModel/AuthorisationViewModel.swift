@@ -154,9 +154,9 @@ public final class AuthorisationViewModel: RxViewModelProtocol, Stepper {
           login: login,
           password: password
         ) { response in
+          self.sendingStateEnabled.onNext(false)
           switch response.result {
           case .success(let result):
-            self.sendingStateEnabled.onNext(false)
             self.steps.accept(AppStep.mainRequired)
             print("\(result) \n")
           case .failure(let error):

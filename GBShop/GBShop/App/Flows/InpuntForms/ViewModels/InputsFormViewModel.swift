@@ -297,10 +297,10 @@ public final class InputsFormViewModel: RxViewModelProtocol, Stepper {
   }
   
   private func responseResult<T>(response: AFDataResponse<T>) {
+    self.sendingStateEnabled.onNext(false)
     switch response.result {
     case .success(let result):
       print("\(result) \n")
-      self.sendingStateEnabled.onNext(false)
       self.steps.accept(AppStep.clouseScreen)
       
     case .failure(let error):
