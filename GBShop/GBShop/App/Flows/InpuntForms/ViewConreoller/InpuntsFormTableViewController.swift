@@ -73,8 +73,8 @@ class InpuntsFormTableViewController: UITableViewController {
 
 private enum Constants {
   // Colors
-  static let viewBackgroundColor = UIColor.Grey
-  static let tableViewBackgroundColor = UIColor.Grey
+  static let viewBackgroundColor = UIColor.Purple
+  static let tableViewBackgroundColor = UIColor.Purple
   static let buttonTintColor = UIColor.Blue
   
   // Sizes
