@@ -20,5 +20,6 @@ public enum AppStep: Step {
   
   // Main
   case mainRequired
+  case clouseScreen
 }
 

@@ -28,6 +28,12 @@ class AuthorisationFlow: Flow {
     case .authorisationRequired:
       return navigationToAuthorisationScreen()
       
+    case .inputsFormRequired:
+      return navigateToInputsForm()
+      
+    case .clouseScreen:
+      return navigateToParent()
+      
     default:
       return .none
     }
@@ -48,6 +54,25 @@ class AuthorisationFlow: Flow {
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
+  }
+  
+  private func navigateToInputsForm() -> FlowContributors {
+    return .one(flowContributor: .contribute(
+      withNextPresentable: InpuntsFormFlow(
+        navigationController: self.navigationController,
+        screenState: .create,
+        user: UserVm(userId: nil, login: nil, password: nil, email: nil, gender: nil, creditCard: nil, bio: nil)
+      ),
+      withNextStepper: OneStepper(
+        withSingleStep: AppStep.inputsFormRequired
+      ))
+    )
+  }
+  
+  private func navigateToParent() -> FlowContributors {
+    self.navigationController.popViewController(animated: true)
+    
+    return .none
   }
 }
 

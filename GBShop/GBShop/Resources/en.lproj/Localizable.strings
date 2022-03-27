@@ -1,12 +1,25 @@
 // MARK: - AButtonViewCell
 "ButtonViewCell.Label.Text" = "Log In";
 "ButtonViewCell.LogIning.Label.Text" = "Log Ining";
+"ButtonViewCell.Create.Label.Text" = "Create";
+"ButtonViewCell.Creating.Label.Text" = "Creating";
+"ButtonViewCell.Update.Label.Text" = "Update";
+"ButtonViewCell.Updating.Label.Text" = "Updating";
 "TextButtonViewCell.Title.Text" = "Go to registration";
 
 // MARK: - ValidationResultCellModel
 "ValidationCellModel.Text" = "Login or password is invalid";
 
-// MARK: - LGInputFormTableViewController
+// MARK: - AuthorisationTableViewController
 "AuthorisationTableViewController.TitleCellModel.Title" = "GBShop";
 "AuthorisationTableViewController.LoginTextField.Placeholder" = "Login";
 "AuthorisationTableViewController.PasswordTextField.Placeholder" = "Password";
+
+// MARK: - InputFormsViewController
+"InputFormsViewController.TitleCellModel.Title" = "GBShop";
+"InputFormsViewController.LoginTextField.Placeholder" = "Login";
+"InputFormsViewController.PasswordTextField.Placeholder" = "Password";
+"InputFormsViewController.GenderTextField.Placeholder" = "Gender";
+"InputFormsViewController.EmailTextField.Placeholder" = "Email";
+"InputFormsViewController.CreditCardTextField.Placeholder" = "Credit Card";
+"InputFormsViewController.BioTextField.Placeholder" = "Bio";

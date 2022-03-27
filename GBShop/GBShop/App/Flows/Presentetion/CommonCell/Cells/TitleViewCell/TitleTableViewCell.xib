@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBShop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-z7-p8i">
-                        <rect key="frame" x="118" y="16" width="133" height="33"/>
+                        <rect key="frame" x="118" y="16" width="133" height="93"/>
                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -25,7 +25,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="nDI-z7-p8i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="M5Y-gq-H1b"/>
-                    <constraint firstAttribute="bottom" secondItem="nDI-z7-p8i" secondAttribute="bottom" constant="120" id="WDc-xD-UZk"/>
+                    <constraint firstAttribute="bottom" secondItem="nDI-z7-p8i" secondAttribute="bottom" constant="60" id="WDc-xD-UZk"/>
                     <constraint firstItem="nDI-z7-p8i" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kH2-bX-1gi"/>
                 </constraints>
             </tableViewCellContentView>
