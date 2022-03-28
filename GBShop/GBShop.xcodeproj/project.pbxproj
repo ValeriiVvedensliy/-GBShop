@@ -88,6 +88,15 @@
 		E0FCC9DA27EBC56D000BE435 /* TextButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9D827EBC56D000BE435 /* TextButtonTableViewCell.swift */; };
 		E0FCC9DB27EBC56D000BE435 /* TextButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCC9D927EBC56D000BE435 /* TextButtonTableViewCell.xib */; };
 		E0FCC9DD27EBC606000BE435 /* TextButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9DC27EBC606000BE435 /* TextButtonCellModel.swift */; };
+		E0FCC9E227ECF023000BE435 /* RxInpuntsFormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9E127ECF023000BE435 /* RxInpuntsFormDataSource.swift */; };
+		E0FCC9E527ECF2B1000BE435 /* InputsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9E427ECF2B1000BE435 /* InputsFormViewModel.swift */; };
+		E0FCC9E927ECFB28000BE435 /* InpuntsFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9E727ECFB28000BE435 /* InpuntsFormTableViewController.swift */; };
+		E0FCC9EA27ECFB28000BE435 /* InpuntsFormTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCC9E827ECFB28000BE435 /* InpuntsFormTableViewController.xib */; };
+		E0FCC9ED27ECFD49000BE435 /* InpuntsFormFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9EC27ECFD49000BE435 /* InpuntsFormFlow.swift */; };
+		E0FCC9F027EFA5D4000BE435 /* UserVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9EF27EFA5D4000BE435 /* UserVm.swift */; };
+		E0FCC9F327EFAC60000BE435 /* InputsFormValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F227EFAC60000BE435 /* InputsFormValidationDelegate.swift */; };
+		E0FCC9F527EFACCE000BE435 /* ValidationFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F427EFACCE000BE435 /* ValidationFields.swift */; };
+		E0FCC9F727F0A4BF000BE435 /* IcNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F627F0A4BF000BE435 /* IcNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +197,15 @@
 		E0FCC9D827EBC56D000BE435 /* TextButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonTableViewCell.swift; sourceTree = "<group>"; };
 		E0FCC9D927EBC56D000BE435 /* TextButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E0FCC9DC27EBC606000BE435 /* TextButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonCellModel.swift; sourceTree = "<group>"; };
+		E0FCC9E127ECF023000BE435 /* RxInpuntsFormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxInpuntsFormDataSource.swift; sourceTree = "<group>"; };
+		E0FCC9E427ECF2B1000BE435 /* InputsFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsFormViewModel.swift; sourceTree = "<group>"; };
+		E0FCC9E727ECFB28000BE435 /* InpuntsFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpuntsFormTableViewController.swift; sourceTree = "<group>"; };
+		E0FCC9E827ECFB28000BE435 /* InpuntsFormTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InpuntsFormTableViewController.xib; sourceTree = "<group>"; };
+		E0FCC9EC27ECFD49000BE435 /* InpuntsFormFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpuntsFormFlow.swift; sourceTree = "<group>"; };
+		E0FCC9EF27EFA5D4000BE435 /* UserVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVm.swift; sourceTree = "<group>"; };
+		E0FCC9F227EFAC60000BE435 /* InputsFormValidationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsFormValidationDelegate.swift; sourceTree = "<group>"; };
+		E0FCC9F427EFACCE000BE435 /* ValidationFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFields.swift; sourceTree = "<group>"; };
+		E0FCC9F627F0A4BF000BE435 /* IcNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +318,7 @@
 				E0FCC9D127EA7CE3000BE435 /* ColorScheme.swift */,
 				E0EC4C7327BC4CA20023692E /* Assets.xcassets */,
 				E0EC4C7527BC4CA20023692E /* LaunchScreen.storyboard */,
+				E0FCC9F627F0A4BF000BE435 /* IcNames.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -342,6 +361,7 @@
 		E0EC4CA127BC4DEB0023692E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCC9DF27ECEFE4000BE435 /* InpuntForms */,
 				E0FCC99B27EA7C06000BE435 /* Authorisation */,
 				E0FCC98C27EA7BF1000BE435 /* Presentetion */,
 				E0F3046927C12B8600F2A2A2 /* ViewController.swift */,
@@ -484,6 +504,7 @@
 		E0FCC98C27EA7BF1000BE435 /* Presentetion */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCC9DE27ECEF96000BE435 /* CommonCell */,
 				E0FCC98D27EA7BF1000BE435 /* GeneralNavigation */,
 				E0FCC98F27EA7BF1000BE435 /* Utils */,
 				E0FCC99227EA7BF1000BE435 /* Components */,
@@ -554,7 +575,6 @@
 		E0FCC99C27EA7C06000BE435 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E0FCC99D27EA7C06000BE435 /* CellModels */,
 				E0FCC9A427EA7C06000BE435 /* AuthorisationViewModel.swift */,
 			);
 			path = ViewModel;
@@ -577,7 +597,6 @@
 		E0FCC9A527EA7C06000BE435 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				E0FCC9A627EA7C06000BE435 /* Cells */,
 				E0FCC9B427EA7C06000BE435 /* RxAuthorisationDataSource.swift */,
 			);
 			path = DataSource;
@@ -656,6 +675,78 @@
 				E0FCC9D927EBC56D000BE435 /* TextButtonTableViewCell.xib */,
 			);
 			path = TextButtonViewCell;
+			sourceTree = "<group>";
+		};
+		E0FCC9DE27ECEF96000BE435 /* CommonCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC99D27EA7C06000BE435 /* CellModels */,
+				E0FCC9A627EA7C06000BE435 /* Cells */,
+			);
+			path = CommonCell;
+			sourceTree = "<group>";
+		};
+		E0FCC9DF27ECEFE4000BE435 /* InpuntForms */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9EE27EFA5AA000BE435 /* Models */,
+				E0FCC9EB27ECFCE9000BE435 /* NavigationFlow */,
+				E0FCC9E627ECFAE4000BE435 /* ViewConreoller */,
+				E0FCC9E327ECF292000BE435 /* ViewModels */,
+				E0FCC9E027ECEFF3000BE435 /* DataSource */,
+			);
+			path = InpuntForms;
+			sourceTree = "<group>";
+		};
+		E0FCC9E027ECEFF3000BE435 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9E127ECF023000BE435 /* RxInpuntsFormDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E0FCC9E327ECF292000BE435 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9F127EFAC3F000BE435 /* ValidationDelegate */,
+				E0FCC9E427ECF2B1000BE435 /* InputsFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0FCC9E627ECFAE4000BE435 /* ViewConreoller */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9E727ECFB28000BE435 /* InpuntsFormTableViewController.swift */,
+				E0FCC9E827ECFB28000BE435 /* InpuntsFormTableViewController.xib */,
+			);
+			path = ViewConreoller;
+			sourceTree = "<group>";
+		};
+		E0FCC9EB27ECFCE9000BE435 /* NavigationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9EC27ECFD49000BE435 /* InpuntsFormFlow.swift */,
+			);
+			path = NavigationFlow;
+			sourceTree = "<group>";
+		};
+		E0FCC9EE27EFA5AA000BE435 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9EF27EFA5D4000BE435 /* UserVm.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0FCC9F127EFAC3F000BE435 /* ValidationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9F227EFAC60000BE435 /* InputsFormValidationDelegate.swift */,
+				E0FCC9F427EFACCE000BE435 /* ValidationFields.swift */,
+			);
+			path = ValidationDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,6 +872,7 @@
 				E0F3045027BEF3F700F2A2A2 /* LaunchScreen.storyboard in Resources */,
 				E0FCC9C727EA7C06000BE435 /* ButtonTableViewCell.xib in Resources */,
 				E0FCC9D627EA7CF5000BE435 /* Localizable.strings in Resources */,
+				E0FCC9EA27ECFB28000BE435 /* InpuntsFormTableViewController.xib in Resources */,
 				E0F3044F27BEF3F200F2A2A2 /* Assets.xcassets in Resources */,
 				E0FCC9C127EA7C06000BE435 /* ValidationTableViewCell.xib in Resources */,
 				E0FCC9CD27EA7C06000BE435 /* AuthorisationTableViewController.xib in Resources */,
@@ -813,14 +905,19 @@
 				E0FCC9C927EA7C06000BE435 /* ButtonViewCell+ReactiveExtensions.swift in Sources */,
 				E0F3045327BEF66000F2A2A2 /* AuthExtension+AuthRequestFactory.swift in Sources */,
 				E0FCC89727CFE71A000BE435 /* ProductsResponse.swift in Sources */,
+				E0FCC9F727F0A4BF000BE435 /* IcNames.swift in Sources */,
 				E0FCC9CB27EA7C06000BE435 /* AuthorisationFlow.swift in Sources */,
 				E0F3045527BEF6A300F2A2A2 /* AuthExtension+Login.swift in Sources */,
 				E0FCC88A27CE7411000BE435 /* ProductRequestFactory.swift in Sources */,
+				E0FCC9F527EFACCE000BE435 /* ValidationFields.swift in Sources */,
 				E0FCC8BA27D6950A000BE435 /* Basket.swift in Sources */,
 				E0FCC9D327EA7CE3000BE435 /* ColorScheme.swift in Sources */,
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,
+				E0FCC9E227ECF023000BE435 /* RxInpuntsFormDataSource.swift in Sources */,
+				E0FCC9F027EFA5D4000BE435 /* UserVm.swift in Sources */,
 				E0FCC8B327D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift in Sources */,
 				E0EC4C6B27BC4CA10023692E /* AppDelegate.swift in Sources */,
+				E0FCC9ED27ECFD49000BE435 /* InpuntsFormFlow.swift in Sources */,
 				E0FCC89127CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift in Sources */,
 				E0FCC8AC27D68192000BE435 /* BasketResponse.swift in Sources */,
 				E0F3045927BF026500F2A2A2 /* AuthExtension+Register.swift in Sources */,
@@ -836,6 +933,7 @@
 				E0FCC9C627EA7C06000BE435 /* TextFieldTableViewCell.swift in Sources */,
 				E0FCC89327CE79C5000BE435 /* ProductExtension+Products.swift in Sources */,
 				E0FCC99727EA7BF1000BE435 /* AppStep.swift in Sources */,
+				E0FCC9F327EFAC60000BE435 /* InputsFormValidationDelegate.swift in Sources */,
 				E0FCC9BE27EA7C06000BE435 /* AuthorisationSectionModel.swift in Sources */,
 				E0FCC9C427EA7C06000BE435 /* TitleTableViewCell.swift in Sources */,
 				E0F3044327BEEA7400F2A2A2 /* RequestRouter.swift in Sources */,
@@ -857,6 +955,8 @@
 				E0F3046B27C12B8600F2A2A2 /* ViewController.swift in Sources */,
 				E0F3044527BEEB3300F2A2A2 /* LoginResult.swift in Sources */,
 				E0FCC9C227EA7C06000BE435 /* ValidationTableViewCell.swift in Sources */,
+				E0FCC9E927ECFB28000BE435 /* InpuntsFormTableViewController.swift in Sources */,
+				E0FCC9E527ECF2B1000BE435 /* InputsFormViewModel.swift in Sources */,
 				E0F3044727BEEB9200F2A2A2 /* User.swift in Sources */,
 				E0FCC89A27D3B035000BE435 /* Comment.swift in Sources */,
 				E0FCC9DA27EBC56D000BE435 /* TextButtonTableViewCell.swift in Sources */,

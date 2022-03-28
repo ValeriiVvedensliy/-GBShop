@@ -131,7 +131,6 @@ public final class AuthorisationViewModel: RxViewModelProtocol, Stepper {
   private func bindRegistrationButton() {
     registrationAction
       .map { _ in
-        print("dgfmdlfmgld")
         return AppStep.inputsFormRequired }
       .bind(to: steps)
       .disposed(by: disposeBag)
@@ -177,9 +176,8 @@ private enum Constants {
   // Strings
   static let logIningLabelText = "ButtonViewCell.LogIning.Label.Text".localizationString
   static let lodInLabelText = "ButtonViewCell.Label.Text".localizationString
+  static let registrationButtonText = "TextButtonViewCell.Title.Text".localizationString
   static let titleCellModelTitle = "AuthorisationTableViewController.TitleCellModel.Title"
   static let loginTextFieldPlaceholder = "AuthorisationTableViewController.LoginTextField.Placeholder"
   static let passwordTextFieldPlaceholder = "AuthorisationTableViewController.PasswordTextField.Placeholder"
-  static let emptyText = ""
-  static let registrationButtonText = "TextButtonViewCell.Title.Text".localizationString
 }
