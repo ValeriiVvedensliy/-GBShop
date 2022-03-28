@@ -97,6 +97,10 @@
 		E0FCC9F327EFAC60000BE435 /* InputsFormValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F227EFAC60000BE435 /* InputsFormValidationDelegate.swift */; };
 		E0FCC9F527EFACCE000BE435 /* ValidationFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F427EFACCE000BE435 /* ValidationFields.swift */; };
 		E0FCC9F727F0A4BF000BE435 /* IcNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9F627F0A4BF000BE435 /* IcNames.swift */; };
+		E0FCC9FD27F0AF16000BE435 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCC9FA27F0AF16000BE435 /* ErrorViewController.swift */; };
+		E0FCC9FF27F0AF16000BE435 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCC9FC27F0AF16000BE435 /* ErrorViewController.xib */; };
+		E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA0127F0B28E000BE435 /* ErrorFlow.swift */; };
+		E0FCCA0427F0B5F6000BE435 /* UIFonts+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +210,10 @@
 		E0FCC9F227EFAC60000BE435 /* InputsFormValidationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsFormValidationDelegate.swift; sourceTree = "<group>"; };
 		E0FCC9F427EFACCE000BE435 /* ValidationFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFields.swift; sourceTree = "<group>"; };
 		E0FCC9F627F0A4BF000BE435 /* IcNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcNames.swift; sourceTree = "<group>"; };
+		E0FCC9FA27F0AF16000BE435 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		E0FCC9FC27F0AF16000BE435 /* ErrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		E0FCCA0127F0B28E000BE435 /* ErrorFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorFlow.swift; sourceTree = "<group>"; };
+		E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +523,7 @@
 		E0FCC98D27EA7BF1000BE435 /* GeneralNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCCA0027F0B250000BE435 /* PopUp */,
 				E0FCC98E27EA7BF1000BE435 /* AppStep.swift */,
 			);
 			path = GeneralNavigation;
@@ -532,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				E0FCC99127EA7BF1000BE435 /* String+Additions.swift */,
+				E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,6 +549,7 @@
 		E0FCC99227EA7BF1000BE435 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCC9F827F0AED9000BE435 /* Screens */,
 				E0FCC99327EA7BF1000BE435 /* Controls */,
 			);
 			path = Components;
@@ -749,6 +760,31 @@
 			path = ValidationDelegate;
 			sourceTree = "<group>";
 		};
+		E0FCC9F827F0AED9000BE435 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9F927F0AF16000BE435 /* ErrorViewController */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E0FCC9F927F0AF16000BE435 /* ErrorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCC9FA27F0AF16000BE435 /* ErrorViewController.swift */,
+				E0FCC9FC27F0AF16000BE435 /* ErrorViewController.xib */,
+			);
+			path = ErrorViewController;
+			sourceTree = "<group>";
+		};
+		E0FCCA0027F0B250000BE435 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA0127F0B28E000BE435 /* ErrorFlow.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -872,6 +908,7 @@
 				E0F3045027BEF3F700F2A2A2 /* LaunchScreen.storyboard in Resources */,
 				E0FCC9C727EA7C06000BE435 /* ButtonTableViewCell.xib in Resources */,
 				E0FCC9D627EA7CF5000BE435 /* Localizable.strings in Resources */,
+				E0FCC9FF27F0AF16000BE435 /* ErrorViewController.xib in Resources */,
 				E0FCC9EA27ECFB28000BE435 /* InpuntsFormTableViewController.xib in Resources */,
 				E0F3044F27BEF3F200F2A2A2 /* Assets.xcassets in Resources */,
 				E0FCC9C127EA7C06000BE435 /* ValidationTableViewCell.xib in Resources */,
@@ -914,6 +951,7 @@
 				E0FCC9D327EA7CE3000BE435 /* ColorScheme.swift in Sources */,
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,
 				E0FCC9E227ECF023000BE435 /* RxInpuntsFormDataSource.swift in Sources */,
+				E0FCCA0427F0B5F6000BE435 /* UIFonts+Additions.swift in Sources */,
 				E0FCC9F027EFA5D4000BE435 /* UserVm.swift in Sources */,
 				E0FCC8B327D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift in Sources */,
 				E0EC4C6B27BC4CA10023692E /* AppDelegate.swift in Sources */,
@@ -923,6 +961,7 @@
 				E0F3045927BF026500F2A2A2 /* AuthExtension+Register.swift in Sources */,
 				E0FCC8A327D3B3D4000BE435 /* CommentExtension+Comments.swift in Sources */,
 				E0FCC89527CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift in Sources */,
+				E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */,
 				E0FCC9CA27EA7C06000BE435 /* RxAuthorisationDataSource.swift in Sources */,
 				E0FCC9DD27EBC606000BE435 /* TextButtonCellModel.swift in Sources */,
 				E0FCC89C27D3B06A000BE435 /* CommentResponse.swift in Sources */,
@@ -962,6 +1001,7 @@
 				E0FCC9DA27EBC56D000BE435 /* TextButtonTableViewCell.swift in Sources */,
 				E0FCC8A727D3B5DB000BE435 /* CommentExtension+CommentDele.swift in Sources */,
 				E0F3043F27BEDE4000F2A2A2 /* CustomDecodableSerializer.swift in Sources */,
+				E0FCC9FD27F0AF16000BE435 /* ErrorViewController.swift in Sources */,
 				E0FCC8A927D3B7FE000BE435 /* CommentExtension+AbstractRequestFactory.swift in Sources */,
 				E0FCC9BC27EA7C06000BE435 /* ValidationCellModel.swift in Sources */,
 				E0FCC8A027D3B0FB000BE435 /* CommentRequestFactory.swift in Sources */,

@@ -23,3 +23,7 @@
 "InputFormsViewController.EmailTextField.Placeholder" = "Email";
 "InputFormsViewController.CreditCardTextField.Placeholder" = "Credit Card";
 "InputFormsViewController.BioTextField.Placeholder" = "Bio";
+
+// MARK: - ErrorViewController
+"ErrorViewController.Title.Text" = "Error";
+"ErrorViewController.Button.Text" = "OK";

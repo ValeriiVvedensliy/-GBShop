@@ -31,8 +31,8 @@ class AuthorisationFlow: Flow {
     case .inputsFormRequired:
       return navigateToInputsForm()
       
-    case .clouseScreen:
-      return navigateToParent()
+    case .error(let text):
+      return navigateToError(text: text)
       
     default:
       return .none
@@ -69,10 +69,16 @@ class AuthorisationFlow: Flow {
     )
   }
   
-  private func navigateToParent() -> FlowContributors {
-    self.navigationController.popViewController(animated: true)
+  private func navigateToError(text: String) -> FlowContributors {
+    guard let controller = navigationController.viewControllers.last else {
+      return .none
+    }
     
-    return .none
+    let flow = ErrorFlow(viewController: controller)
+    return .one(flowContributor: .contribute(
+      withNextPresentable: flow,
+      withNextStepper: OneStepper(withSingleStep: AppStep.error(text: text)))
+    )
   }
 }
 

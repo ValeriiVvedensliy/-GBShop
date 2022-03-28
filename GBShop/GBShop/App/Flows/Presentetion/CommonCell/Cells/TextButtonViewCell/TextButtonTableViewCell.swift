@@ -27,6 +27,12 @@ class TextButtonTableViewCell: RxTableViewCell<TextButtonCellModel>, NibReusable
       .drive(button.rx.isEnabled)
       .disposed(by: disposeBag)
     
+    item.isSending
+      .filter { !$0 }
+      .map { _ in true }
+      .drive(button.rx.isEnabled)
+      .disposed(by: disposeBag)
+    
     button.rx.tap
       .map { _ in Void() }
       .bind(to: item.onTap)

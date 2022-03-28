@@ -19,13 +19,15 @@ extension String {
     )
   }
   
-  func leftAlignedAttributedString(
-    foreground: UIColor
+  func aligmentAttributedString(
+    foreground: UIColor,
+    aligment: NSTextAlignment,
+    sketchLineHeight: CGFloat
   ) -> NSAttributedString {
-    let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.alignment = .left
-    paragraphStyle.lineSpacing = 22
     let font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.alignment = aligment
+    paragraphStyle.lineSpacing = font.lineSpacing(sketchLineHeight: sketchLineHeight)
     let attributes = [
       NSAttributedString.Key.font: font,
       NSAttributedString.Key.paragraphStyle: paragraphStyle,
