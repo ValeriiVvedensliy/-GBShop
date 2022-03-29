@@ -61,8 +61,6 @@ class ViewController: UIViewController {
 
   private func getProducts() {
     request.getProducts(
-      pageNumber: 1,
-      categoryId: "123",
       completionHandler: responseResult
     )
   }
@@ -103,13 +101,15 @@ class ViewController: UIViewController {
       id: 1,
       name: "Айфон",
       price: 38_000,
-      description: "телефон"
+      description: "телефон",
+      url: ""
     ))
     basket.addProduct(product: Product(
       id: 2,
       name: "Mac_Book",
       price: 78_000,
-      description: "ноутбук"
+      description: "ноутбук",
+      url: ""
     ))
     
     request.payBasket(userId: UUID().uuidString, completionHandler: responseResult)
