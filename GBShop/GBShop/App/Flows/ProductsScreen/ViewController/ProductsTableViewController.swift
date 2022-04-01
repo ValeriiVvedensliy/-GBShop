@@ -16,7 +16,7 @@ import Reusable
 class ProductsTableViewController: UITableViewController {
   lazy var dataSource = RxProductsDataSource()
   private let disposeBag = DisposeBag()
-  public var viewModel: ProductsViewModel?
+  public var viewModel: ProductsViewModel!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,16 @@ class ProductsTableViewController: UITableViewController {
     viewModel?.output.source
       .drive(tableView.rx.items(dataSource: dataSource))
       .disposed(by: disposeBag)
+    
+    tableView.rx.itemSelected
+      .bind(to: viewModel.indexOfSelectedCell)
+      .disposed(by: disposeBag)
   }
   
   private func setUpView() {
+    navigationController?.isNavigationBarHidden = false
+    navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIButton())
+    setUpNavigationBarTitle()
     view.backgroundColor = Constants.viewBackgroundColor
     tableView.backgroundColor = Constants.tableViewBackgroundColor
     tableView.separatorStyle = .none
@@ -42,6 +49,18 @@ class ProductsTableViewController: UITableViewController {
     tableView.keyboardDismissMode = .interactive
     tableView.dataSource = nil
     tableView.delegate = nil
+  }
+  
+  private func setUpNavigationBarTitle() {
+    let titleLabel = UILabel()
+    titleLabel.attributedText = "Products".aligmentAttributedString(
+      foreground: .White,
+      aligment: .center,
+      sketchLineHeight: 22,
+      fontSize: 19
+    );
+    
+    navigationItem.titleView = titleLabel
   }
 
   private func registerNib() {

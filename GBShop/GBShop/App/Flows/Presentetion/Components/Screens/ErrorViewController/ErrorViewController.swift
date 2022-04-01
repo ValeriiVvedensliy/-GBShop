@@ -58,7 +58,8 @@ class ErrorViewController: UIViewController, Stepper {
     titleLabel.attributedText = Constants.errorTitleText.aligmentAttributedString(
       foreground: Constants.titleLabelForegroundColor,
       aligment: .center,
-      sketchLineHeight: Constants.titleLabelSketchLineHeight
+      sketchLineHeight: Constants.titleLabelSketchLineHeight,
+      fontSize: 19
     )
   }
 
@@ -66,7 +67,8 @@ class ErrorViewController: UIViewController, Stepper {
     messageLabel.attributedText = messageText.aligmentAttributedString(
       foreground: Constants.messageLabelForeground,
       aligment: .center,
-      sketchLineHeight: Constants.messageLineSketchLineHeight
+      sketchLineHeight: Constants.messageLineSketchLineHeight,
+      fontSize: 17
     )
   }
 }

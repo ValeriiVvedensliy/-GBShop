@@ -25,8 +25,11 @@ class ProductsFlow: Flow {
     guard let step = step as? AppStep else { return .none }
 
     switch step {
-    case .productsRequiredScreen:
+    case .productsScreenRequired:
       return navigationToProductScreen()
+      
+    case.detailProductScreenRequired(let product):
+      return navigateToDetailScreen(product: product)
       
     case .error(let text):
       return navigateToError(text: text)
@@ -45,14 +48,20 @@ class ProductsFlow: Flow {
       bundle: bundle
     )
     viewController.viewModel = viewModel
-    viewController.modalPresentationStyle = .overFullScreen
-    viewController.modalTransitionStyle = .crossDissolve
-
-    self.navigationController.present(viewController, animated: true)
+    self.navigationController.pushViewController(viewController, animated: true)
 
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
+  }
+  
+  private func navigateToDetailScreen(product: ProductDetailVisualModel) -> FlowContributors {
+    let flow = DetailScreenNavigation(navigationController: navigationController)
+    
+    return .one(flowContributor: .contribute(
+      withNextPresentable: flow,
+      withNextStepper: OneStepper(withSingleStep: AppStep.detailProductScreenRequired(product: product)))
+    )
   }
   
   private func navigateToError(text: String) -> FlowContributors {

@@ -24,6 +24,7 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
   private(set) var input: Input!
   private(set) var output: Output!
   private let disposeBag = DisposeBag()
+  private var cellModels: [ProductsCellModel] = []
   public let steps = PublishRelay<Step>()
   
   private var service = AppDelegate.container.resolve(AbstractRequestFactory.self)!
@@ -42,6 +43,43 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
     )
     
     bindProducts()
+    bindsSelected()
+  }
+  
+  private func bindsSelected() {
+    indexOfSelectedCell
+      .bind { [weak self] index in
+        guard let model = self?.cellModels[index.item],
+              let commentsCount = self?.getCountComments(productId: "\(model.id)") else { return }
+       
+        
+        self?.steps.accept(AppStep.detailProductScreenRequired(product: ProductDetailVisualModel(
+          id: model.id,
+          name: model.name,
+          price: model.price,
+          description: model.description,
+          image: model.image,
+          countComments: commentsCount
+        )))
+      }
+      .disposed(by: disposeBag)
+  }
+  
+  private func getCountComments(productId: String) -> String {
+    var count = ""
+    service.getComments(productId: productId) { response in
+      switch response.result {
+      case .success(let result):
+        let model = result as CommentsResponse
+        count = "\(model.comments?.count ?? 0)"
+        break
+        
+      default:
+        break
+      }
+    }
+    
+    return count
   }
   
   private func bindProducts() {
@@ -58,9 +96,9 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
   
   private func setSource(response: ProductsResponse) {
     let products = response.products
-    var cellModels: [ProductsCellModel] = []
     products?.forEach { product in
       cellModels.append(ProductsCellModel(
+        id: product.id,
         name: product.name,
         price: product.price,
         description: product.description,
