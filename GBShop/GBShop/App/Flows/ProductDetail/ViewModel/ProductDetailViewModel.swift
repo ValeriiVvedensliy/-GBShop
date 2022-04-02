@@ -81,6 +81,17 @@ class ProductDetailViewModel: RxViewModelProtocol, Stepper {
   }
   
   private func setupBinding() {
-    
+    onGoToCommentsScreenAction
+      .bind {[weak self] _ in
+        guard let count = self?.product?.countComments,
+              let productId = self?.product?.id else { return }
+        
+        if count.isEmpty {
+          return
+        }
+            
+        self?.steps.accept(AppStep.commentsScreenRequired(productId: "\(productId)"))
+      }
+      .disposed(by: disposeBag)
   }
 }

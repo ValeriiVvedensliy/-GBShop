@@ -43,7 +43,7 @@ class ProductCommentViewCell: RxTableViewCell<ProductDetailCommentModel>, NibReu
       in: Bundle(for: ProductCommentViewCell.self),
       compatibleWith: nil)
     buttonImageView.tintColor = Constants.imageTintColor
-    buttonImageView.addGestureRecognizer(tapGesture)
+    rootView.addGestureRecognizer(tapGesture)
   }
   
   private func setUpLabel() {
@@ -68,6 +68,7 @@ class ProductCommentViewCell: RxTableViewCell<ProductDetailCommentModel>, NibReu
       .disposed(by: disposeBag)
     
     tapGesture.rx.event
+      .filter { $0.state == .ended }
       .map { _ in Void() }
       .bind(to: item.onTap)
       .disposed(by: disposeBag)

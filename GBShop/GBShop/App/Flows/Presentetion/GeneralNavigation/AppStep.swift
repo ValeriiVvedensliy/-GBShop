@@ -22,5 +22,8 @@ public enum AppStep: Step {
   case productsScreenRequired
   case clouseScreen
   case detailProductScreenRequired(product: ProductDetailVisualModel)
+  
+  // Comment
+  case commentsScreenRequired(productId: String)
 }
 

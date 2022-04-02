@@ -10,6 +10,15 @@
 		E0249FCB27F37CE300DD12E7 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0249FCA27F37CE300DD12E7 /* ProductsViewModel.swift */; };
 		E02E241327F77E60000B53A2 /* ProductDetailVisualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E241227F77E60000B53A2 /* ProductDetailVisualModel.swift */; };
 		E02E241627F799AD000B53A2 /* DetailScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E241527F799AD000B53A2 /* DetailScreenNavigation.swift */; };
+		E02E242027F8BCFF000B53A2 /* CommentCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E241F27F8BCFF000B53A2 /* CommentCellModel.swift */; };
+		E02E242227F8BD70000B53A2 /* CommentSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242127F8BD70000B53A2 /* CommentSectionModel.swift */; };
+		E02E242627F8BE64000B53A2 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242427F8BE64000B53A2 /* CommentViewCell.swift */; };
+		E02E242727F8BE64000B53A2 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E02E242527F8BE64000B53A2 /* CommentViewCell.xib */; };
+		E02E242927F8CA60000B53A2 /* RxCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242827F8CA60000B53A2 /* RxCommentsDataSource.swift */; };
+		E02E242B27F8D150000B53A2 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242A27F8D150000B53A2 /* CommentViewModel.swift */; };
+		E02E242F27F8D348000B53A2 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242D27F8D348000B53A2 /* CommentViewController.swift */; };
+		E02E243027F8D348000B53A2 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E02E242E27F8D348000B53A2 /* CommentViewController.xib */; };
+		E02E243327F8D461000B53A2 /* CommentsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E243227F8D461000B53A2 /* CommentsFlow.swift */; };
 		E0E4D0C427F4F0EA009DF953 /* ProductDetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C327F4F0EA009DF953 /* ProductDetailCellModel.swift */; };
 		E0E4D0C627F4F140009DF953 /* ProductDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C527F4F140009DF953 /* ProductDetailSectionModel.swift */; };
 		E0E4D0C927F4F244009DF953 /* ProductImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C827F4F244009DF953 /* ProductImageCellModel.swift */; };
@@ -151,6 +160,15 @@
 		E0249FCA27F37CE300DD12E7 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		E02E241227F77E60000B53A2 /* ProductDetailVisualModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVisualModel.swift; sourceTree = "<group>"; };
 		E02E241527F799AD000B53A2 /* DetailScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenNavigation.swift; sourceTree = "<group>"; };
+		E02E241F27F8BCFF000B53A2 /* CommentCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellModel.swift; sourceTree = "<group>"; };
+		E02E242127F8BD70000B53A2 /* CommentSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSectionModel.swift; sourceTree = "<group>"; };
+		E02E242427F8BE64000B53A2 /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
+		E02E242527F8BE64000B53A2 /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
+		E02E242827F8CA60000B53A2 /* RxCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCommentsDataSource.swift; sourceTree = "<group>"; };
+		E02E242A27F8D150000B53A2 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		E02E242D27F8D348000B53A2 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		E02E242E27F8D348000B53A2 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		E02E243227F8D461000B53A2 /* CommentsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFlow.swift; sourceTree = "<group>"; };
 		E0E4D0C327F4F0EA009DF953 /* ProductDetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCellModel.swift; sourceTree = "<group>"; };
 		E0E4D0C527F4F140009DF953 /* ProductDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailSectionModel.swift; sourceTree = "<group>"; };
 		E0E4D0C827F4F244009DF953 /* ProductImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCellModel.swift; sourceTree = "<group>"; };
@@ -312,6 +330,70 @@
 			isa = PBXGroup;
 			children = (
 				E02E241527F799AD000B53A2 /* DetailScreenNavigation.swift */,
+			);
+			path = NavigationFlow;
+			sourceTree = "<group>";
+		};
+		E02E241927F8BB82000B53A2 /* CommentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E02E243127F8D447000B53A2 /* NavigationFlow */,
+				E02E242C27F8D323000B53A2 /* ViewController */,
+				E02E241D27F8BCB0000B53A2 /* ViewModel */,
+				E02E241A27F8BBAA000B53A2 /* DataSource */,
+			);
+			path = CommentScreen;
+			sourceTree = "<group>";
+		};
+		E02E241A27F8BBAA000B53A2 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E02E242327F8BE16000B53A2 /* Cells */,
+				E02E242827F8CA60000B53A2 /* RxCommentsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E02E241D27F8BCB0000B53A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E02E241E27F8BCC2000B53A2 /* CellModels */,
+				E02E242A27F8D150000B53A2 /* CommentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E02E241E27F8BCC2000B53A2 /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				E02E241F27F8BCFF000B53A2 /* CommentCellModel.swift */,
+				E02E242127F8BD70000B53A2 /* CommentSectionModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
+		E02E242327F8BE16000B53A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E02E242427F8BE64000B53A2 /* CommentViewCell.swift */,
+				E02E242527F8BE64000B53A2 /* CommentViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E02E242C27F8D323000B53A2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E02E242D27F8D348000B53A2 /* CommentViewController.swift */,
+				E02E242E27F8D348000B53A2 /* CommentViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E02E243127F8D447000B53A2 /* NavigationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E02E243227F8D461000B53A2 /* CommentsFlow.swift */,
 			);
 			path = NavigationFlow;
 			sourceTree = "<group>";
@@ -503,6 +585,7 @@
 		E0EC4CA127BC4DEB0023692E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				E02E241927F8BB82000B53A2 /* CommentScreen */,
 				E0E4D0AD27F4E510009DF953 /* ProductDetail */,
 				E0FCCA0527F23C8B000BE435 /* ProductsScreen */,
 				E0FCC9DF27ECEFE4000BE435 /* InpuntForms */,
@@ -1113,9 +1196,11 @@
 				E0FCC9D627EA7CF5000BE435 /* Localizable.strings in Resources */,
 				E0FCC9FF27F0AF16000BE435 /* ErrorViewController.xib in Resources */,
 				E0FCCA2627F25F03000BE435 /* ProductViewCell.xib in Resources */,
+				E02E242727F8BE64000B53A2 /* CommentViewCell.xib in Resources */,
 				E0FCC9EA27ECFB28000BE435 /* InpuntsFormTableViewController.xib in Resources */,
 				E0F3044F27BEF3F200F2A2A2 /* Assets.xcassets in Resources */,
 				E0FCC9C127EA7C06000BE435 /* ValidationTableViewCell.xib in Resources */,
+				E02E243027F8D348000B53A2 /* CommentViewController.xib in Resources */,
 				E0E4D0E127F4FDA2009DF953 /* ProductCommentViewCell.xib in Resources */,
 				E0E4D0D927F4F6C7009DF953 /* ProductScreenViewCell.xib in Resources */,
 				E0FCC9CD27EA7C06000BE435 /* AuthorisationTableViewController.xib in Resources */,
@@ -1157,6 +1242,7 @@
 				E0FCC9F527EFACCE000BE435 /* ValidationFields.swift in Sources */,
 				E0E4D0C427F4F0EA009DF953 /* ProductDetailCellModel.swift in Sources */,
 				E0FCC8BA27D6950A000BE435 /* Basket.swift in Sources */,
+				E02E242F27F8D348000B53A2 /* CommentViewController.swift in Sources */,
 				E0FCC9D327EA7CE3000BE435 /* ColorScheme.swift in Sources */,
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,
 				E0FCC9E227ECF023000BE435 /* RxInpuntsFormDataSource.swift in Sources */,
@@ -1168,6 +1254,7 @@
 				E0E4D0CB27F4F312009DF953 /* ProductTextCellModel.swift in Sources */,
 				E0FCC9ED27ECFD49000BE435 /* InpuntsFormFlow.swift in Sources */,
 				E0FCC89127CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift in Sources */,
+				E02E242227F8BD70000B53A2 /* CommentSectionModel.swift in Sources */,
 				E0FCC8AC27D68192000BE435 /* BasketResponse.swift in Sources */,
 				E0E4D0E727F5096F009DF953 /* RxProductDetailDataSource.swift in Sources */,
 				E0F3045927BF026500F2A2A2 /* AuthExtension+Register.swift in Sources */,
@@ -1177,8 +1264,10 @@
 				E0FCC89527CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift in Sources */,
 				E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */,
 				E0E4D0E427F50845009DF953 /* ProductDetailViewController.swift in Sources */,
+				E02E243327F8D461000B53A2 /* CommentsFlow.swift in Sources */,
 				E0FCC9CA27EA7C06000BE435 /* RxAuthorisationDataSource.swift in Sources */,
 				E0FCCA1C27F25B64000BE435 /* ProductsCellModel.swift in Sources */,
+				E02E242027F8BCFF000B53A2 /* CommentCellModel.swift in Sources */,
 				E0FCC9DD27EBC606000BE435 /* TextButtonCellModel.swift in Sources */,
 				E0FCC89C27D3B06A000BE435 /* CommentResponse.swift in Sources */,
 				E0E4D0DC27F4F8E8009DF953 /* ProductTextViewCell.swift in Sources */,
@@ -1192,6 +1281,7 @@
 				E0E4D0C627F4F140009DF953 /* ProductDetailSectionModel.swift in Sources */,
 				E0FCC99727EA7BF1000BE435 /* AppStep.swift in Sources */,
 				E0FCC9F327EFAC60000BE435 /* InputsFormValidationDelegate.swift in Sources */,
+				E02E242B27F8D150000B53A2 /* CommentViewModel.swift in Sources */,
 				E0FCC9BE27EA7C06000BE435 /* AuthorisationSectionModel.swift in Sources */,
 				E0FCC9C427EA7C06000BE435 /* TitleTableViewCell.swift in Sources */,
 				E0F3044327BEEA7400F2A2A2 /* RequestRouter.swift in Sources */,
@@ -1208,6 +1298,8 @@
 				E0FCC9C027EA7C06000BE435 /* AuthorisationViewModel.swift in Sources */,
 				E0FCCA1127F24332000BE435 /* ProductsFlow.swift in Sources */,
 				E0F3046E27C12C2000F2A2A2 /* AbstractRequestFactory.swift in Sources */,
+				E02E242927F8CA60000B53A2 /* RxCommentsDataSource.swift in Sources */,
+				E02E242627F8BE64000B53A2 /* CommentViewCell.swift in Sources */,
 				E0FCC99927EA7BF1000BE435 /* RxTableViewCell.swift in Sources */,
 				E0F3045727BEF6D700F2A2A2 /* AuthExtension+Logout.swift in Sources */,
 				E0FCC9CC27EA7C06000BE435 /* AuthorisationTableViewController.swift in Sources */,

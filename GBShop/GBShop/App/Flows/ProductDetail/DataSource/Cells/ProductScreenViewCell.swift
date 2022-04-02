@@ -40,4 +40,8 @@ private enum Constants {
   // Colors
   static let contentViewBackgroundColor = UIColor.Purple
   static let rootViewBackgroundColor = UIColor.clear
+  
+  // Fonts
+  static let fontHeader = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
+  static let fontBody = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
 }

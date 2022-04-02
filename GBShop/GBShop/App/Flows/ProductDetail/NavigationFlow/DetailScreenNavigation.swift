@@ -29,6 +29,9 @@ class DetailScreenNavigation: Flow {
     case .detailProductScreenRequired(let product):
       return navigationToDetailScreen(product: product)
       
+    case .commentsScreenRequired(let id):
+      return navigateToCommetsScreen(productId: id)
+      
     default:
       return .none
     }
@@ -49,5 +52,14 @@ class DetailScreenNavigation: Flow {
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
+  }
+  
+  private func navigateToCommetsScreen(productId: String) -> FlowContributors {
+    let flow = CommentsFlow(navigationController: navigationController)
+    
+    return .one(flowContributor: .contribute(
+      withNextPresentable: flow,
+      withNextStepper: OneStepper(withSingleStep: AppStep.commentsScreenRequired(productId: productId)))
+    )
   }
 }

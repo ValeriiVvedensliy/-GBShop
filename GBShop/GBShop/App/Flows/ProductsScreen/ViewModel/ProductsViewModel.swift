@@ -49,37 +49,27 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
   private func bindsSelected() {
     indexOfSelectedCell
       .bind { [weak self] index in
-        guard let model = self?.cellModels[index.item],
-              let commentsCount = self?.getCountComments(productId: "\(model.id)") else { return }
-       
-        
-        self?.steps.accept(AppStep.detailProductScreenRequired(product: ProductDetailVisualModel(
-          id: model.id,
-          name: model.name,
-          price: model.price,
-          description: model.description,
-          image: model.image,
-          countComments: commentsCount
-        )))
+        self?.service.getComments(productId: "\(String(describing: self?.cellModels[index.item].id))") { response in
+          switch response.result {
+          case .success(let result):
+            let model = result as CommentsResponse
+            let count = "\(model.comments?.count ?? 0)"
+            self?.steps.accept(AppStep.detailProductScreenRequired(product: ProductDetailVisualModel(
+              id: self?.cellModels[index.item].id,
+              name: self?.cellModels[index.item].name,
+              price: self?.cellModels[index.item].price,
+              description: self?.cellModels[index.item].description,
+              image: self?.cellModels[index.item].image,
+              countComments: count
+            )))
+            break
+            
+          default:
+            break
+          }
+        }
       }
       .disposed(by: disposeBag)
-  }
-  
-  private func getCountComments(productId: String) -> String {
-    var count = ""
-    service.getComments(productId: productId) { response in
-      switch response.result {
-      case .success(let result):
-        let model = result as CommentsResponse
-        count = "\(model.comments?.count ?? 0)"
-        break
-        
-      default:
-        break
-      }
-    }
-    
-    return count
   }
   
   private func bindProducts() {
