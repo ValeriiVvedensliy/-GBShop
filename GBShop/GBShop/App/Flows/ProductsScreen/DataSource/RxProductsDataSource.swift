@@ -23,7 +23,7 @@ class RxProductsDataSource: RxTableViewSectionedReloadDataSource<ProductsSection
     indexPath: IndexPath
   ) -> UITableViewCell {
     let titleCell = tableView.dequeueReusableCell(for: indexPath) as ProductViewCell
-    titleCell.config(model: item)
+    titleCell.config(item: item)
 
     return titleCell
   }

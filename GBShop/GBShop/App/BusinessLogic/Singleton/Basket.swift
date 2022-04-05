@@ -15,6 +15,7 @@ class Basket {
     return instance
   }()
     
+  public var userId: String = ""
   private var products: [Product] = []
   private init() {}
   
@@ -22,8 +23,8 @@ class Basket {
     products.append(product)
   }
 
-  func deleteProduct(product: Product) {
-    let index = products.firstIndex { $0.id == product.id }
+  func deleteProduct(productId: Int) {
+    let index = products.firstIndex { $0.id == productId }
     guard let index = index else { return }
 
     products.remove(at: index)
@@ -33,6 +34,12 @@ class Basket {
     guard !products.isEmpty else { return nil }
 
     return products.map({$0.id})
+  }
+  
+  func getProduct() -> [Product]? {
+    guard !products.isEmpty else { return nil }
+
+    return products
   }
   
   func getPrice() -> Decimal? {

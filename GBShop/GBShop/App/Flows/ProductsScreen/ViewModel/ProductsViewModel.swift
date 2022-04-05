@@ -15,6 +15,7 @@ import Alamofire
 public final class ProductsViewModel: RxViewModelProtocol, Stepper {
   struct Input {
     let onSelectedCell: AnyObserver<IndexPath>
+    let onBasketTap: PublishRelay<Void>
   }
 
   struct Output {
@@ -29,13 +30,18 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
   
   private var service = AppDelegate.container.resolve(AbstractRequestFactory.self)!
   
+  // Input
+  private let buttonTap = PublishRelay<Int>()
+  private let basketTap = PublishRelay<Void>()
+  
   // Output
   let indexOfSelectedCell = PublishSubject<IndexPath>()
   private let source = BehaviorSubject<[ProductsSectionModel]>(value: [])
 
   public init() {
     input = Input(
-      onSelectedCell: indexOfSelectedCell.asObserver()
+      onSelectedCell: indexOfSelectedCell.asObserver(),
+      onBasketTap: basketTap
     )
     
     output = Output(
@@ -44,6 +50,7 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
     
     bindProducts()
     bindsSelected()
+    bindButton()
   }
   
   private func bindsSelected() {
@@ -84,18 +91,44 @@ public final class ProductsViewModel: RxViewModelProtocol, Stepper {
     }
   }
   
+  private func bindButton() {
+    buttonTap
+      .bind { [weak self] index in
+        guard let product = self?.cellModels[index] else { return }
+        
+        let basket = Basket.shared
+        basket.addProduct(product: Product(
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          description: product.description,
+          url: product.image
+        ))
+        self?.steps.accept(AppStep.showToast)
+      }
+      .disposed(by: disposeBag)
+    
+    basketTap
+      .map { _ in AppStep.basketScreenRequired }
+      .bind(to: steps)
+      .disposed(by: disposeBag)
+  }
+  
   private func setSource(response: ProductsResponse) {
-    let products = response.products
-    products?.forEach { product in
+    guard let products = response.products else { return }
+    for (index, product) in products.enumerated() {
       cellModels.append(ProductsCellModel(
         id: product.id,
         name: product.name,
         price: product.price,
         description: product.description,
-        image: product.url
+        image: product.url,
+        isHiddenButton: false,
+        buttonTap: buttonTap,
+        index: index
       ))
     }
-    
+
     let sectionCellModels = [
       ProductsSectionModel(
         items: cellModels

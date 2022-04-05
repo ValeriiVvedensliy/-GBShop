@@ -19,6 +19,11 @@
 		E02E242F27F8D348000B53A2 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E242D27F8D348000B53A2 /* CommentViewController.swift */; };
 		E02E243027F8D348000B53A2 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E02E242E27F8D348000B53A2 /* CommentViewController.xib */; };
 		E02E243327F8D461000B53A2 /* CommentsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E243227F8D461000B53A2 /* CommentsFlow.swift */; };
+		E02E243527FCBBB1000B53A2 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E243427FCBBB1000B53A2 /* UIViewController+Additions.swift */; };
+		E02E243A27FCC75F000B53A2 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E243827FCC75F000B53A2 /* BasketViewController.swift */; };
+		E02E243B27FCC75F000B53A2 /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E02E243927FCC75F000B53A2 /* BasketViewController.xib */; };
+		E02E243E27FCC839000B53A2 /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E243D27FCC839000B53A2 /* BasketViewModel.swift */; };
+		E02E244127FCCD88000B53A2 /* BasketFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E244027FCCD88000B53A2 /* BasketFlow.swift */; };
 		E0E4D0C427F4F0EA009DF953 /* ProductDetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C327F4F0EA009DF953 /* ProductDetailCellModel.swift */; };
 		E0E4D0C627F4F140009DF953 /* ProductDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C527F4F140009DF953 /* ProductDetailSectionModel.swift */; };
 		E0E4D0C927F4F244009DF953 /* ProductImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D0C827F4F244009DF953 /* ProductImageCellModel.swift */; };
@@ -169,6 +174,11 @@
 		E02E242D27F8D348000B53A2 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		E02E242E27F8D348000B53A2 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
 		E02E243227F8D461000B53A2 /* CommentsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFlow.swift; sourceTree = "<group>"; };
+		E02E243427FCBBB1000B53A2 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		E02E243827FCC75F000B53A2 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		E02E243927FCC75F000B53A2 /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
+		E02E243D27FCC839000B53A2 /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
+		E02E244027FCCD88000B53A2 /* BasketFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFlow.swift; sourceTree = "<group>"; };
 		E0E4D0C327F4F0EA009DF953 /* ProductDetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCellModel.swift; sourceTree = "<group>"; };
 		E0E4D0C527F4F140009DF953 /* ProductDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailSectionModel.swift; sourceTree = "<group>"; };
 		E0E4D0C827F4F244009DF953 /* ProductImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCellModel.swift; sourceTree = "<group>"; };
@@ -398,6 +408,41 @@
 			path = NavigationFlow;
 			sourceTree = "<group>";
 		};
+		E02E243627FCC646000B53A2 /* BasketScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E02E243F27FCCD6F000B53A2 /* NavigationFlow */,
+				E02E243C27FCC825000B53A2 /* ViewModel */,
+				E02E243727FCC6CD000B53A2 /* ViewController */,
+			);
+			path = BasketScreen;
+			sourceTree = "<group>";
+		};
+		E02E243727FCC6CD000B53A2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E02E243827FCC75F000B53A2 /* BasketViewController.swift */,
+				E02E243927FCC75F000B53A2 /* BasketViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E02E243C27FCC825000B53A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E02E243D27FCC839000B53A2 /* BasketViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E02E243F27FCCD6F000B53A2 /* NavigationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E02E244027FCCD88000B53A2 /* BasketFlow.swift */,
+			);
+			path = NavigationFlow;
+			sourceTree = "<group>";
+		};
 		E0E4D0AD27F4E510009DF953 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +630,7 @@
 		E0EC4CA127BC4DEB0023692E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				E02E243627FCC646000B53A2 /* BasketScreen */,
 				E02E241927F8BB82000B53A2 /* CommentScreen */,
 				E0E4D0AD27F4E510009DF953 /* ProductDetail */,
 				E0FCCA0527F23C8B000BE435 /* ProductsScreen */,
@@ -761,6 +807,7 @@
 			children = (
 				E0FCC99127EA7BF1000BE435 /* String+Additions.swift */,
 				E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */,
+				E02E243427FCBBB1000B53A2 /* UIViewController+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1190,6 +1237,7 @@
 			files = (
 				E0FCC9C327EA7C06000BE435 /* TitleTableViewCell.xib in Resources */,
 				E0FCC9C527EA7C06000BE435 /* TextFieldTableViewCell.xib in Resources */,
+				E02E243B27FCC75F000B53A2 /* BasketViewController.xib in Resources */,
 				E0F3045027BEF3F700F2A2A2 /* LaunchScreen.storyboard in Resources */,
 				E0E4D0E527F50845009DF953 /* ProductDetailViewController.xib in Resources */,
 				E0FCC9C727EA7C06000BE435 /* ButtonTableViewCell.xib in Resources */,
@@ -1247,6 +1295,7 @@
 				E0F3043B27BEDDD800F2A2A2 /* AbstractErrorParser.swift in Sources */,
 				E0FCC9E227ECF023000BE435 /* RxInpuntsFormDataSource.swift in Sources */,
 				E0E4D0D827F4F6C7009DF953 /* ProductScreenViewCell.swift in Sources */,
+				E02E243E27FCC839000B53A2 /* BasketViewModel.swift in Sources */,
 				E0FCCA0427F0B5F6000BE435 /* UIFonts+Additions.swift in Sources */,
 				E0FCC9F027EFA5D4000BE435 /* UserVm.swift in Sources */,
 				E0FCC8B327D68437000BE435 /* BasketExtension+AbstractRequestFactory.swift in Sources */,
@@ -1261,8 +1310,10 @@
 				E0E4D0CD27F4F3B4009DF953 /* ProductDetailCommentModel.swift in Sources */,
 				E0FCCA2527F25F03000BE435 /* ProductViewCell.swift in Sources */,
 				E0FCC8A327D3B3D4000BE435 /* CommentExtension+Comments.swift in Sources */,
+				E02E243A27FCC75F000B53A2 /* BasketViewController.swift in Sources */,
 				E0FCC89527CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift in Sources */,
 				E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */,
+				E02E243527FCBBB1000B53A2 /* UIViewController+Additions.swift in Sources */,
 				E0E4D0E427F50845009DF953 /* ProductDetailViewController.swift in Sources */,
 				E02E243327F8D461000B53A2 /* CommentsFlow.swift in Sources */,
 				E0FCC9CA27EA7C06000BE435 /* RxAuthorisationDataSource.swift in Sources */,
@@ -1323,6 +1374,7 @@
 				E0FCC8A927D3B7FE000BE435 /* CommentExtension+AbstractRequestFactory.swift in Sources */,
 				E0FCC9BC27EA7C06000BE435 /* ValidationCellModel.swift in Sources */,
 				E0FCC8A027D3B0FB000BE435 /* CommentRequestFactory.swift in Sources */,
+				E02E244127FCCD88000B53A2 /* BasketFlow.swift in Sources */,
 				E0FCCA1827F25AEE000BE435 /* ProductsTableViewController.swift in Sources */,
 				E0FCCA2127F25D83000BE435 /* ProductsSectionModel.swift in Sources */,
 				E0F3044127BEE9F400F2A2A2 /* RequestFactory.swift in Sources */,

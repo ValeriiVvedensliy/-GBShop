@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RxDataSources
+import RxCocoa
 
 struct ProductsCellModel {
   let id: Int
@@ -14,4 +14,7 @@ struct ProductsCellModel {
   let price: Decimal
   let description: String
   let image: String
+  let isHiddenButton: Bool
+  let buttonTap: PublishRelay<Int>
+  let index: Int
 }
