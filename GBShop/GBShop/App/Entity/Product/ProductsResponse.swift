@@ -9,6 +9,5 @@ import Foundation
 
 struct ProductsResponse: Codable {
   var result: Int
-  var pageNumber: Int?
   var products: [Product]?
 }

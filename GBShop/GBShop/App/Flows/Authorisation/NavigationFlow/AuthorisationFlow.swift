@@ -34,6 +34,9 @@ class AuthorisationFlow: Flow {
     case .error(let text):
       return navigateToError(text: text)
       
+    case .productsRequiredScreen:
+      return navigationToProductsScreen()
+      
     default:
       return .none
     }
@@ -54,6 +57,17 @@ class AuthorisationFlow: Flow {
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
+  }
+  
+  private func navigationToProductsScreen() -> FlowContributors {
+    return .one(flowContributor: .contribute(
+      withNextPresentable: ProductsFlow(
+        navigationController: self.navigationController
+      ),
+      withNextStepper: OneStepper(
+        withSingleStep: AppStep.productsRequiredScreen
+      ))
+    )
   }
   
   private func navigateToInputsForm() -> FlowContributors {

@@ -1,8 +1,8 @@
 //
-//  AuthorisationTableViewController.swift
+//  ProductsTableViewController.swift
 //  GBShop
 //
-//  Created by Valera Vvedenskiy on 22.03.2022.
+//  Created by Valera Vvedenskiy on 29.03.2022.
 //
 
 import UIKit
@@ -13,28 +13,27 @@ import Differentiator
 import RxFlow
 import Reusable
 
-public final class AuthorisationTableViewController: UITableViewController {
-  lazy var dataSource = RxAuthorisationDataSource()
+class ProductsTableViewController: UITableViewController {
+  lazy var dataSource = RxProductsDataSource()
   private let disposeBag = DisposeBag()
-  public var viewModel: AuthorisationViewModel?
+  public var viewModel: ProductsViewModel?
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-  override public func viewDidLoad() {
-    super.viewDidLoad()
-
-    registerNib()
-    setUpView()
-    setupBindings()
-  }
-
+      registerNib()
+      setUpView()
+      setupBindings()
+    }
+  
   // MARK: - Bindings
   private func setupBindings() {
     viewModel?.output.source
-      .bind(to: tableView.rx.items(dataSource: dataSource))
+      .drive(tableView.rx.items(dataSource: dataSource))
       .disposed(by: disposeBag)
   }
-
+  
   private func setUpView() {
-    navigationController?.isNavigationBarHidden = true
     view.backgroundColor = Constants.viewBackgroundColor
     tableView.backgroundColor = Constants.tableViewBackgroundColor
     tableView.separatorStyle = .none
@@ -46,11 +45,7 @@ public final class AuthorisationTableViewController: UITableViewController {
   }
 
   private func registerNib() {
-    tableView.register(cellType: TitleTableViewCell.self)
-    tableView.register(cellType: TextFieldTableViewCell.self)
-    tableView.register(cellType: ButtonTableViewCell.self)
-    tableView.register(cellType: ValidationTableViewCell.self)
-    tableView.register(cellType: TextButtonTableViewCell.self)
+    tableView.register(cellType: ProductViewCell.self)
   }
 }
 
@@ -60,5 +55,5 @@ private enum Constants {
   static let tableViewBackgroundColor = UIColor.Purple
   
   // Sizes
-  static let tableViewEstimatedRowHeight: CGFloat = 48
+  static let tableViewEstimatedRowHeight: CGFloat = 150
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0249FCB27F37CE300DD12E7 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0249FCA27F37CE300DD12E7 /* ProductsViewModel.swift */; };
 		E0EC4C6B27BC4CA10023692E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC4C6A27BC4CA10023692E /* AppDelegate.swift */; };
 		E0EC4C6D27BC4CA10023692E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC4C6C27BC4CA10023692E /* SceneDelegate.swift */; };
 		E0EC4C8227BC4CA20023692E /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC4C8127BC4CA20023692E /* GBShopTests.swift */; };
@@ -101,6 +102,15 @@
 		E0FCC9FF27F0AF16000BE435 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCC9FC27F0AF16000BE435 /* ErrorViewController.xib */; };
 		E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA0127F0B28E000BE435 /* ErrorFlow.swift */; };
 		E0FCCA0427F0B5F6000BE435 /* UIFonts+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */; };
+		E0FCCA1127F24332000BE435 /* ProductsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA1027F24332000BE435 /* ProductsFlow.swift */; };
+		E0FCCA1827F25AEE000BE435 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA1627F25AEE000BE435 /* ProductsTableViewController.swift */; };
+		E0FCCA1927F25AEE000BE435 /* ProductsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCCA1727F25AEE000BE435 /* ProductsTableViewController.xib */; };
+		E0FCCA1C27F25B64000BE435 /* ProductsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA1B27F25B64000BE435 /* ProductsCellModel.swift */; };
+		E0FCCA1F27F25C7C000BE435 /* RxProductsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA1E27F25C7C000BE435 /* RxProductsDataSource.swift */; };
+		E0FCCA2127F25D83000BE435 /* ProductsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA2027F25D83000BE435 /* ProductsSectionModel.swift */; };
+		E0FCCA2527F25F03000BE435 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCCA2327F25F03000BE435 /* ProductViewCell.swift */; };
+		E0FCCA2627F25F03000BE435 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FCCA2427F25F03000BE435 /* ProductViewCell.xib */; };
+		E0FCCA2927F26411000BE435 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E0FCCA2827F26411000BE435 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +131,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0249FCA27F37CE300DD12E7 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		E0EC4C6727BC4CA10023692E /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC4C6A27BC4CA10023692E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EC4C6C27BC4CA10023692E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +225,14 @@
 		E0FCC9FC27F0AF16000BE435 /* ErrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
 		E0FCCA0127F0B28E000BE435 /* ErrorFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorFlow.swift; sourceTree = "<group>"; };
 		E0FCCA0327F0B5F6000BE435 /* UIFonts+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Additions.swift"; sourceTree = "<group>"; };
+		E0FCCA1027F24332000BE435 /* ProductsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFlow.swift; sourceTree = "<group>"; };
+		E0FCCA1627F25AEE000BE435 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		E0FCCA1727F25AEE000BE435 /* ProductsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableViewController.xib; sourceTree = "<group>"; };
+		E0FCCA1B27F25B64000BE435 /* ProductsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCellModel.swift; sourceTree = "<group>"; };
+		E0FCCA1E27F25C7C000BE435 /* RxProductsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxProductsDataSource.swift; sourceTree = "<group>"; };
+		E0FCCA2027F25D83000BE435 /* ProductsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSectionModel.swift; sourceTree = "<group>"; };
+		E0FCCA2327F25F03000BE435 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		E0FCCA2427F25F03000BE435 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FCCA2927F26411000BE435 /* Kingfisher in Frameworks */,
 				E0FCC98527EA7957000BE435 /* RxFlow in Frameworks */,
 				E0F3043827BEDD3E00F2A2A2 /* Alamofire in Frameworks */,
 				E0F3047627C12F7A00F2A2A2 /* Swinject in Frameworks */,
@@ -369,6 +389,7 @@
 		E0EC4CA127BC4DEB0023692E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCCA0527F23C8B000BE435 /* ProductsScreen */,
 				E0FCC9DF27ECEFE4000BE435 /* InpuntForms */,
 				E0FCC99B27EA7C06000BE435 /* Authorisation */,
 				E0FCC98C27EA7BF1000BE435 /* Presentetion */,
@@ -785,6 +806,70 @@
 			path = PopUp;
 			sourceTree = "<group>";
 		};
+		E0FCCA0527F23C8B000BE435 /* ProductsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA1D27F25C5C000BE435 /* DataSource */,
+				E0FCCA1527F25832000BE435 /* ViewModel */,
+				E0FCCA1427F257A3000BE435 /* ViewController */,
+				E0FCCA0F27F2431C000BE435 /* NavigationFlow */,
+			);
+			path = ProductsScreen;
+			sourceTree = "<group>";
+		};
+		E0FCCA0F27F2431C000BE435 /* NavigationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA1027F24332000BE435 /* ProductsFlow.swift */,
+			);
+			path = NavigationFlow;
+			sourceTree = "<group>";
+		};
+		E0FCCA1427F257A3000BE435 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA1627F25AEE000BE435 /* ProductsTableViewController.swift */,
+				E0FCCA1727F25AEE000BE435 /* ProductsTableViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E0FCCA1527F25832000BE435 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA1A27F25B25000BE435 /* CellModels */,
+				E0249FCA27F37CE300DD12E7 /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0FCCA1A27F25B25000BE435 /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA1B27F25B64000BE435 /* ProductsCellModel.swift */,
+				E0FCCA2027F25D83000BE435 /* ProductsSectionModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
+		E0FCCA1D27F25C5C000BE435 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA2227F25ED2000BE435 /* Cells */,
+				E0FCCA1E27F25C7C000BE435 /* RxProductsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E0FCCA2227F25ED2000BE435 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCCA2327F25F03000BE435 /* ProductViewCell.swift */,
+				E0FCCA2427F25F03000BE435 /* ProductViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -807,6 +892,7 @@
 				E0FCC98427EA7957000BE435 /* RxFlow */,
 				E0FCC98727EA79B3000BE435 /* Reusable */,
 				E0FCC98A27EA7AF5000BE435 /* RxDataSources */,
+				E0FCCA2827F26411000BE435 /* Kingfisher */,
 			);
 			productName = GBShop;
 			productReference = E0EC4C6727BC4CA10023692E /* GBShop.app */;
@@ -886,6 +972,7 @@
 				E0FCC98327EA7957000BE435 /* XCRemoteSwiftPackageReference "RxFlow" */,
 				E0FCC98627EA79B3000BE435 /* XCRemoteSwiftPackageReference "Reusable" */,
 				E0FCC98927EA7AF5000BE435 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				E0FCCA2727F26411000BE435 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = E0EC4C6827BC4CA10023692E /* Products */;
 			projectDirPath = "";
@@ -909,11 +996,13 @@
 				E0FCC9C727EA7C06000BE435 /* ButtonTableViewCell.xib in Resources */,
 				E0FCC9D627EA7CF5000BE435 /* Localizable.strings in Resources */,
 				E0FCC9FF27F0AF16000BE435 /* ErrorViewController.xib in Resources */,
+				E0FCCA2627F25F03000BE435 /* ProductViewCell.xib in Resources */,
 				E0FCC9EA27ECFB28000BE435 /* InpuntsFormTableViewController.xib in Resources */,
 				E0F3044F27BEF3F200F2A2A2 /* Assets.xcassets in Resources */,
 				E0FCC9C127EA7C06000BE435 /* ValidationTableViewCell.xib in Resources */,
 				E0FCC9CD27EA7C06000BE435 /* AuthorisationTableViewController.xib in Resources */,
 				E0FCC9DB27EBC56D000BE435 /* TextButtonTableViewCell.xib in Resources */,
+				E0FCCA1927F25AEE000BE435 /* ProductsTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,10 +1048,12 @@
 				E0FCC89127CE78C8000BE435 /* ProductExtension+AbstractRequestFactory.swift in Sources */,
 				E0FCC8AC27D68192000BE435 /* BasketResponse.swift in Sources */,
 				E0F3045927BF026500F2A2A2 /* AuthExtension+Register.swift in Sources */,
+				E0FCCA2527F25F03000BE435 /* ProductViewCell.swift in Sources */,
 				E0FCC8A327D3B3D4000BE435 /* CommentExtension+Comments.swift in Sources */,
 				E0FCC89527CE7B4F000BE435 /* ProductExtension+ProductsDetail.swift in Sources */,
 				E0FCCA0227F0B28E000BE435 /* ErrorFlow.swift in Sources */,
 				E0FCC9CA27EA7C06000BE435 /* RxAuthorisationDataSource.swift in Sources */,
+				E0FCCA1C27F25B64000BE435 /* ProductsCellModel.swift in Sources */,
 				E0FCC9DD27EBC606000BE435 /* TextButtonCellModel.swift in Sources */,
 				E0FCC89C27D3B06A000BE435 /* CommentResponse.swift in Sources */,
 				E0F3044A27BEEC7900F2A2A2 /* AuthRequestFactory.swift in Sources */,
@@ -978,12 +1069,14 @@
 				E0F3044327BEEA7400F2A2A2 /* RequestRouter.swift in Sources */,
 				E0EC4C6D27BC4CA10023692E /* SceneDelegate.swift in Sources */,
 				E0FCC9BA27EA7C06000BE435 /* ButtonCellModel.swift in Sources */,
+				E0249FCB27F37CE300DD12E7 /* ProductsViewModel.swift in Sources */,
 				E0FCC8B127D68350000BE435 /* BasketExtension+Action.swift in Sources */,
 				E0FCC88827CE732E000BE435 /* ProductDescription.swift in Sources */,
 				E0FCC9BB27EA7C06000BE435 /* TextFieldCellModel.swift in Sources */,
 				E0FCC9C827EA7C06000BE435 /* ButtonTableViewCell.swift in Sources */,
 				E0FCC99A27EA7BF1000BE435 /* RxViewModelProtocol.swift in Sources */,
 				E0FCC9C027EA7C06000BE435 /* AuthorisationViewModel.swift in Sources */,
+				E0FCCA1127F24332000BE435 /* ProductsFlow.swift in Sources */,
 				E0F3046E27C12C2000F2A2A2 /* AbstractRequestFactory.swift in Sources */,
 				E0FCC99927EA7BF1000BE435 /* RxTableViewCell.swift in Sources */,
 				E0F3045727BEF6D700F2A2A2 /* AuthExtension+Logout.swift in Sources */,
@@ -997,6 +1090,7 @@
 				E0FCC9E927ECFB28000BE435 /* InpuntsFormTableViewController.swift in Sources */,
 				E0FCC9E527ECF2B1000BE435 /* InputsFormViewModel.swift in Sources */,
 				E0F3044727BEEB9200F2A2A2 /* User.swift in Sources */,
+				E0FCCA1F27F25C7C000BE435 /* RxProductsDataSource.swift in Sources */,
 				E0FCC89A27D3B035000BE435 /* Comment.swift in Sources */,
 				E0FCC9DA27EBC56D000BE435 /* TextButtonTableViewCell.swift in Sources */,
 				E0FCC8A727D3B5DB000BE435 /* CommentExtension+CommentDele.swift in Sources */,
@@ -1005,6 +1099,8 @@
 				E0FCC8A927D3B7FE000BE435 /* CommentExtension+AbstractRequestFactory.swift in Sources */,
 				E0FCC9BC27EA7C06000BE435 /* ValidationCellModel.swift in Sources */,
 				E0FCC8A027D3B0FB000BE435 /* CommentRequestFactory.swift in Sources */,
+				E0FCCA1827F25AEE000BE435 /* ProductsTableViewController.swift in Sources */,
+				E0FCCA2127F25D83000BE435 /* ProductsSectionModel.swift in Sources */,
 				E0F3044127BEE9F400F2A2A2 /* RequestFactory.swift in Sources */,
 				E0FCC83927CD5948000BE435 /* ProfileResult.swift in Sources */,
 				E0FCC89E27D3B095000BE435 /* CommentActionResponse.swift in Sources */,
@@ -1396,6 +1492,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		E0FCCA2727F26411000BE435 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1423,6 +1527,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E0FCC98927EA7AF5000BE435 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		E0FCCA2827F26411000BE435 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0FCCA2727F26411000BE435 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

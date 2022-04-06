@@ -12,4 +12,5 @@ struct Product: Codable {
   let name: String
   let price: Decimal
   let description: String
+  let url: String
 }

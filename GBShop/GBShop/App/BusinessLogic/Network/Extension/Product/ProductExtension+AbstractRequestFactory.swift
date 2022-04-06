@@ -10,13 +10,11 @@ import Alamofire
 
 extension AbstractRequestFactory: ProductRequestFactory {
   func getProducts(
-    pageNumber: Int,
-    categoryId: String,
     completionHandler: @escaping (AFDataResponse<ProductsResponse>) -> Void
   ) {
     guard let baseUrl = baseUrl else { return }
 
-    let requestModel = Products(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
+    let requestModel = Products(baseUrl: baseUrl)
     self.request(request: requestModel, completionHandler: completionHandler)
   }
       
