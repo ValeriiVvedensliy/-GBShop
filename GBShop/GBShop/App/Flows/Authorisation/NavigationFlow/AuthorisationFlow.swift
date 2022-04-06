@@ -34,7 +34,7 @@ class AuthorisationFlow: Flow {
     case .error(let text):
       return navigateToError(text: text)
       
-    case .productsRequiredScreen:
+    case .productsScreenRequired:
       return navigationToProductsScreen()
       
     default:
@@ -65,7 +65,7 @@ class AuthorisationFlow: Flow {
         navigationController: self.navigationController
       ),
       withNextStepper: OneStepper(
-        withSingleStep: AppStep.productsRequiredScreen
+        withSingleStep: AppStep.productsScreenRequired
       ))
     )
   }

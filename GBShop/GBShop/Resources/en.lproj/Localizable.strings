@@ -27,3 +27,6 @@
 // MARK: - ErrorViewController
 "ErrorViewController.Title.Text" = "Error";
 "ErrorViewController.Button.Text" = "OK";
+
+// MARK: - Detail Products
+"Detail.CommentsCell.Text" = "Отзывы";

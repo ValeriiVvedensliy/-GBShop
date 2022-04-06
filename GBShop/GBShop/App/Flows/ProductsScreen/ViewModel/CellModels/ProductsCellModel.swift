@@ -9,6 +9,7 @@ import Foundation
 import RxDataSources
 
 struct ProductsCellModel {
+  let id: Int
   let name: String
   let price: Decimal
   let description: String

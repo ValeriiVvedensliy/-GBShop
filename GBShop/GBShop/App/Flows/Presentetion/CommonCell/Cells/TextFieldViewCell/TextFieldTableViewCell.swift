@@ -37,7 +37,8 @@ class TextFieldTableViewCell: RxTableViewCell<TextFieldCellModel>, NibReusable {
       .aligmentAttributedString(
         foreground: Constants.textFieldForegroundColor,
         aligment: .left,
-        sketchLineHeight: Constants.placeholderSketchLineHeight
+        sketchLineHeight: Constants.placeholderSketchLineHeight,
+        fontSize: 17
       )
 
     textField.rx.text

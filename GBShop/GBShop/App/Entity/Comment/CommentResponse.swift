@@ -9,5 +9,5 @@ import Foundation
 
 struct CommentsResponse: Codable {
   var result: Int
-  let comments: [Comment]?
+  var comments: [Comment]?
 }

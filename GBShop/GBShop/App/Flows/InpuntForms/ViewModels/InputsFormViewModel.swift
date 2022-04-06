@@ -144,6 +144,7 @@ public final class InputsFormViewModel: RxViewModelProtocol, Stepper {
     
     setupBinding()
   }
+  
   private func setupBinding() {
     bindValidationResult()
     bindSending()

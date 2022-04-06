@@ -22,9 +22,10 @@ extension String {
   func aligmentAttributedString(
     foreground: UIColor,
     aligment: NSTextAlignment,
-    sketchLineHeight: CGFloat
+    sketchLineHeight: CGFloat,
+    fontSize: CGFloat
   ) -> NSAttributedString {
-    let font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
+    let font = UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.regular)
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.alignment = aligment
     paragraphStyle.lineSpacing = font.lineSpacing(sketchLineHeight: sketchLineHeight)

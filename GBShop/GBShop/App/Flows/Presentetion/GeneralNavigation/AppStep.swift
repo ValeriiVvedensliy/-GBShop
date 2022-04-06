@@ -19,7 +19,11 @@ public enum AppStep: Step {
   case inputsFormRequired
     
   // Products
-  case productsRequiredScreen
+  case productsScreenRequired
   case clouseScreen
+  case detailProductScreenRequired(product: ProductDetailVisualModel)
+  
+  // Comment
+  case commentsScreenRequired(productId: String)
 }
 

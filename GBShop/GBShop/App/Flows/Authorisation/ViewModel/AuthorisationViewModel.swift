@@ -157,7 +157,7 @@ public final class AuthorisationViewModel: RxViewModelProtocol, Stepper {
           self.sendingStateEnabled.onNext(false)
           switch response.result {
           case .success(let result):
-            self.steps.accept(AppStep.productsRequiredScreen)
+            self.steps.accept(AppStep.productsScreenRequired)
             print("\(result) \n")
           case .failure(let error):
             self.steps.accept(AppStep.error(text: error.localizedDescription))
