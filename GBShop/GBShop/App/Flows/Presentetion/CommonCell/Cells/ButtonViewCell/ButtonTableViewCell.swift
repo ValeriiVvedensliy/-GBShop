@@ -98,6 +98,9 @@ class ButtonTableViewCell: RxTableViewCell<ButtonCellModel>, NibReusable  {
     spinner.color = Constants.spinnerColor
     spinner.isHidden = true
     label.textColor = Constants.labelTextColor
+    
+    rootView.isAccessibilityElement = true
+    rootView.accessibilityIdentifier = "LoginButton"
   }
 }
 

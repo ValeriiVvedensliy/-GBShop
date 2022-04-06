@@ -51,6 +51,9 @@ class ProductsTableViewController: UITableViewController {
     tableView.keyboardDismissMode = .interactive
     tableView.dataSource = nil
     tableView.delegate = nil
+    
+    tableView.isAccessibilityElement = true
+    tableView.accessibilityIdentifier = "ProductsScreen"
   }
   
   private func setUpNavigationBarTitle() {

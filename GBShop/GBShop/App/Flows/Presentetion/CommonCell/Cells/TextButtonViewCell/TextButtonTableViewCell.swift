@@ -40,6 +40,9 @@ class TextButtonTableViewCell: RxTableViewCell<TextButtonCellModel>, NibReusable
     
     button.setTitle(item.title, for: .normal)
     button.tintColor = Constants.buttonTintColor
+    
+    button.isAccessibilityElement = true
+    button.accessibilityIdentifier = "ButtonRegistration"
   }
   
   private func setUpView() {
