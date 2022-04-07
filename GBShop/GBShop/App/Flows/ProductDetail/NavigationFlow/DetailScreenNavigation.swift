@@ -8,6 +8,7 @@
 import Foundation
 import RxFlow
 import UIKit
+import Firebase
 
 class DetailScreenNavigation: Flow {
   var navigationController: UINavigationController
@@ -48,6 +49,13 @@ class DetailScreenNavigation: Flow {
     viewController.viewModel = viewModel
 
     self.navigationController.pushViewController(viewController, animated: true)
+
+    Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+      "userId": String(describing: Basket.shared.userId),
+      "productId": String(describing: product.id),
+      "productName": String(describing: product.name),
+      "message": "Show Product Datail Screen"
+    ])
 
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,

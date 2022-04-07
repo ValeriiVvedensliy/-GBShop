@@ -8,6 +8,7 @@
 import Foundation
 import RxFlow
 import UIKit
+import Firebase
 
 class BasketFlow: Flow {
   var navigationController: UINavigationController
@@ -50,6 +51,12 @@ class BasketFlow: Flow {
     viewController.viewModel = viewModel
     self.navigationController.pushViewController(viewController, animated: true)
 
+    Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+      "userId": String(describing: Basket.shared.userId),
+      "productxId": String(describing: Basket.shared.getProductIds()),
+      "message": "Show Basket"
+    ])
+    
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
