@@ -11,6 +11,7 @@ import RxCocoa
 import RxDataSources
 import RxFlow
 import Alamofire
+import Firebase
 
 public enum InputsScreenState {
   case create
@@ -302,9 +303,17 @@ public final class InputsFormViewModel: RxViewModelProtocol, Stepper {
     switch response.result {
     case .success(let result):
       print("\(result) \n")
+      Analytics.logEvent(AnalyticsEventSignUp, parameters: [
+        "userId": String(describing: user.userId),
+        "message": "Register Successed"
+      ])
       self.steps.accept(AppStep.clouseScreen)
       
     case .failure(let error):
+      Analytics.logEvent(AnalyticsEventLogin, parameters: [
+        "userId": String(describing: user.userId),
+        "message": "Register faild"
+      ])
       self.steps.accept(AppStep.error(text: error.localizedDescription))
     }
   }

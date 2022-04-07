@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import RxFlow
+import Firebase
 
 public final class AuthorisationViewModel: RxViewModelProtocol, Stepper {
   struct Input {
@@ -157,10 +158,17 @@ public final class AuthorisationViewModel: RxViewModelProtocol, Stepper {
           self.sendingStateEnabled.onNext(false)
           switch response.result {
           case .success(let result):
+            Analytics.logEvent(AnalyticsEventLogin, parameters: [
+              "userId": String(describing: result.user?.id),
+              "message": "Login Successed"
+            ])
             Basket.shared.userId = String(describing: result.user?.id)
             self.steps.accept(AppStep.productsScreenRequired)
             print("\(result) \n")
           case .failure(let error):
+            Analytics.logEvent(AnalyticsEventLogin, parameters: [
+              "message": "Fail Login"
+            ])
             self.steps.accept(AppStep.error(text: error.localizedDescription))
           }
         }

@@ -11,6 +11,7 @@ import RxCocoa
 import RxDataSources
 import RxFlow
 import Alamofire
+import Firebase
 
 public final class BasketViewModel: RxViewModelProtocol, Stepper {
   struct Input {
@@ -58,11 +59,21 @@ public final class BasketViewModel: RxViewModelProtocol, Stepper {
         self.service.payBasket(userId: self.basket.userId) { response in
           switch response.result {
           case .success(_):
+            Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+              "userId": String(describing: Basket.shared.userId),
+              "productxId": String(describing: Basket.shared.getProductIds()),
+              "message": "By products Successed"
+            ])
             self.basket.defaultState()
             self.steps.accept(AppStep.clouseScreen)
             
           case .failure(let error):
             self.steps.accept(AppStep.error(text: error.localizedDescription))
+            Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+              "userId": String(describing: Basket.shared.userId),
+              "productxId": String(describing: Basket.shared.getProductIds()),
+              "message": "By products Fail"
+            ])
           }
         }
       }

@@ -7,6 +7,8 @@
 
 import Foundation
 import Alamofire
+import FirebaseCrashlytics
+import Firebase
 
 extension AbstractRequestFactory: AuthRequestFactory {
   func login(
@@ -14,7 +16,10 @@ extension AbstractRequestFactory: AuthRequestFactory {
     password: String,
     completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void
   ) {
-    guard let baseUrl = baseUrl else { return }
+    guard let baseUrl = baseUrl else {
+      Crashlytics.crashlytics().log("fatalError")
+      return
+    }
 
     let requestModel = Login(baseUrl: baseUrl, login: login, password: password)
     self.request(request: requestModel, completionHandler: completionHandler)
@@ -24,7 +29,10 @@ extension AbstractRequestFactory: AuthRequestFactory {
     userId: String,
     completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
-    guard let baseUrl = baseUrl else { return }
+    guard let baseUrl = baseUrl else {
+      Crashlytics.crashlytics().log("fatalError")
+      return
+    }
 
     let requestModel = Logout(baseUrl: baseUrl, userId: userId)
     self.request(request: requestModel, completionHandler: completionHandler)
@@ -39,7 +47,10 @@ extension AbstractRequestFactory: AuthRequestFactory {
     bio: String,
     completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
-    guard let baseUrl = baseUrl else { return }
+    guard let baseUrl = baseUrl else {
+      Crashlytics.crashlytics().log("fatalError")
+      return
+    }
 
     let requestModel = Register(
       baseUrl: baseUrl,
@@ -63,7 +74,10 @@ extension AbstractRequestFactory: AuthRequestFactory {
     bio: String,
     completionHandler: @escaping (AFDataResponse<ProfileResult>) -> Void
   ) {
-    guard let baseUrl = baseUrl else { return }
+    guard let baseUrl = baseUrl else {
+      Crashlytics.crashlytics().log("fatalError")
+      return
+    }
 
     let requestModel = ChangeUser(
       baseUrl: baseUrl,
