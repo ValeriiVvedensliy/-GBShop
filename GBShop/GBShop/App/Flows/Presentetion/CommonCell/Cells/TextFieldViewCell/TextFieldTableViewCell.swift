@@ -50,6 +50,9 @@ class TextFieldTableViewCell: RxTableViewCell<TextFieldCellModel>, NibReusable {
       .map(!)
       .drive(rx.isEnabled)
       .disposed(by: disposeBag)
+    
+    textField.isAccessibilityElement = true
+    textField.accessibilityIdentifier = item.placeholder
   }
   
   private func setUpView() {

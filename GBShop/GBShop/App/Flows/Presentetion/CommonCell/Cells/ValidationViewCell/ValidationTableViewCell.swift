@@ -30,6 +30,9 @@ class ValidationTableViewCell: RxTableViewCell<ValidationCellModel>, NibReusable
   private func setUpCell() {
     contentView.backgroundColor = Constants.contentViewBackgroundColor
     label.textColor = Constants.labelTextColor
+    
+    label.isAccessibilityElement = true
+    label.accessibilityIdentifier = "ValidationText"
   }
 }
 

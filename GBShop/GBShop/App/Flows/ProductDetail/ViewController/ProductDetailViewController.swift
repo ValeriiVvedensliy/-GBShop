@@ -61,7 +61,7 @@ class ProductDetailViewController: UITableViewController {
 
     navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
   }
-
+  
   private func registerNib() {
     tableView.register(cellType: ProductScreenViewCell.self)
     tableView.register(cellType: ProductTextViewCell.self)

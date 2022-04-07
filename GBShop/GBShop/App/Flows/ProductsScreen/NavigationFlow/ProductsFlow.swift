@@ -28,8 +28,14 @@ class ProductsFlow: Flow {
     case .productsScreenRequired:
       return navigationToProductScreen()
       
-    case.detailProductScreenRequired(let product):
+    case .detailProductScreenRequired(let product):
       return navigateToDetailScreen(product: product)
+      
+    case .basketScreenRequired:
+      return navigateToBasketScreen()
+      
+    case .showToast:
+      return showToast()
       
     case .error(let text):
       return navigateToError(text: text)
@@ -53,6 +59,23 @@ class ProductsFlow: Flow {
     return .one(flowContributor: .contribute(
       withNextPresentable: viewController,
       withNextStepper: viewModel))
+  }
+  
+  private func showToast() -> FlowContributors {
+    guard let controller = navigationController.viewControllers.last else { return .none }
+    
+    controller.showToast(message: "Product move to basket", font: .systemFont(ofSize: 17))
+    
+    return .none
+  }
+  
+  private func navigateToBasketScreen() -> FlowContributors {
+    let flow = BasketFlow(navigationController: navigationController)
+    
+    return .one(flowContributor: .contribute(
+      withNextPresentable: flow,
+      withNextStepper: OneStepper(withSingleStep: AppStep.basketScreenRequired))
+    )
   }
   
   private func navigateToDetailScreen(product: ProductDetailVisualModel) -> FlowContributors {
