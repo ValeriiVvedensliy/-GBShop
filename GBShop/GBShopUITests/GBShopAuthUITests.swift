@@ -14,14 +14,17 @@ class GBShopAuthUITests: XCTestCase {
     super.setUp()
     continueAfterFailure = false
     app = XCUIApplication()
+    setupSnapshot(app)
     app.launch()
   }
   
   func testSuccess() {
+    snapshot("LoginScreen")
     let tablesQuery = XCUIApplication().tables
     enterAuthData(login: "administrator", password: "12345678", tablesQuery: tablesQuery)
     let resultText = tablesQuery.tables["ProductsScreen"]
 
+    snapshot("Products Screen")
     XCTAssertNotNil(resultText)
   }
   
